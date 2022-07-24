@@ -100,11 +100,11 @@ CREATE TABLE Account(
     Balance MONEY DEFAULT 0.0
 );
 
-CREATE TABLE InsuranceType(
-    InsuranceTypeID INT PRIMARY KEY,
-    InsuranceName VARCHAR(10),
-    InsuranceDescription VARCHAR(50)
-);
+-- CREATE TABLE InsuranceType(
+--     InsuranceTypeID INT PRIMARY KEY,
+--     InsuranceName VARCHAR(10),
+--     InsuranceDescription VARCHAR(50)
+-- );
 
 
 CREATE TABLE Insurance(
@@ -118,11 +118,11 @@ CREATE TABLE Insurance(
 );
 
 
-CREATE TABLE LoanType(
-    LoanTypeID INT PRIMARY KEY,
-    LoanType VARCHAR(10),
-    LoanDescription VARCHAR(50)
-);
+-- CREATE TABLE LoanType(
+--     LoanTypeID INT PRIMARY KEY,
+--     LoanType VARCHAR(10),
+--     LoanDescription VARCHAR(50)
+-- );
 
 CREATE TABLE Loan(
     LoanID INT PRIMARY KEY,
@@ -135,3 +135,36 @@ CREATE TABLE Loan(
     LoanDisbursed MONEY,
     RecentDisbursementDate DATE
 );
+
+-- This table stores the different credit card providers such as Visa, Mastercard and so on
+CREATE TABLE CreditCardProvider(
+    CreditCardProviderID INT PRIMARY KEY,
+    Name VARCHAR(20)
+);
+
+CREATE TABLE Card(
+    CardID INT PRIMARY KEY,
+    AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
+    CardTypeID INT FOREIGN KEY REFERENCES CardType(CardTypeID),
+    ApprovedBY INT FOREIGN KEY REFERENCES Employee(EmployeeID),
+    CreditCardName VARCHAR(20),
+    CreditCardProviderID INT FOREIGN KEY REFERENCES CreditCardProvider(CreditCardProviderID),
+    Balance MONEY,
+    Status VARCHAR(10),
+    InterestRate FLOAT
+);
+
+
+-- Is it if I put the Beneficiary ID as Foreign key? 
+-- Remove loan id from the table in the erd
+CREATE TABLE TransactionTable(
+    TransactionID INT PRIMARY KEY,
+    AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
+    CardID INT FOREIGN KEY REFERENCES Card(CardID),
+    InsuranceID INT FOREIGN KEY REFERENCES Insurance(InsuranceID),
+    LoanID INT FOREIGN KEY REFERENCES Loan(LoanID),
+    BeneficiaryAccountID INT FOREIGN KEY REFERENCES Account(AccountID),
+    PaymentDate DATE,
+    TransactionAmount MONEY
+)
+
