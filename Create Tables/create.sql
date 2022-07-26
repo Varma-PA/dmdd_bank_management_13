@@ -83,12 +83,11 @@ CREATE TABLE Account(
     Balance MONEY DEFAULT 0.0
 );
 
---Table Insurance Type
-CREATE TABLE InsuranceType(
-    InsuranceTypeID INT NOT NULL PRIMARY KEY,
-    InsuranceName VARCHAR(10) NOT NULL,
-    InsuranceDescription VARCHAR(50)
-);
+-- CREATE TABLE InsuranceType(
+--     InsuranceTypeID INT PRIMARY KEY,
+--     InsuranceName VARCHAR(10),
+--     InsuranceDescription VARCHAR(50)
+-- );
 
 --Table Insurance
 CREATE TABLE Insurance(
@@ -100,12 +99,12 @@ CREATE TABLE Insurance(
     [Status] VARCHAR(20)
 );
 
---Table Loan Type
-CREATE TABLE LoanType(
-    LoanTypeID INT NOT NULL PRIMARY KEY,
-    LoanName VARCHAR(20) NOT NULL,
-    LoanDescription VARCHAR(50)
-);
+
+-- CREATE TABLE LoanType(
+--     LoanTypeID INT PRIMARY KEY,
+--     LoanType VARCHAR(10),
+--     LoanDescription VARCHAR(50)
+-- );
 
 --Table Loan
 CREATE TABLE Loan(
@@ -120,32 +119,35 @@ CREATE TABLE Loan(
     RecentDisbursementDate DATE
 );
 
---Table Card Type
-CREATE TABLE CardType(
-    CardTypeID INT NOT NULL PRIMARY KEY,
-    CardName VARCHAR(20) NOT NULL,
-	CardProvider VARCHAR(20),
-	InterestRate DECIMAL(2,2),
-    CardDescription VARCHAR(10)
+-- This table stores the different credit card providers such as Visa, Mastercard and so on
+CREATE TABLE CreditCardProvider(
+    CreditCardProviderID INT PRIMARY KEY,
+    Name VARCHAR(20)
 );
 
---Table Card
-CREATE TABLE [Card](
-    CardID INT NOT NULL PRIMARY KEY,
-    AccountID INT NOT NULL FOREIGN KEY REFERENCES Account(AccountID),
-    CardTypeID INT NOT NULL FOREIGN KEY REFERENCES CardType(CardTypeID),
-	ApprovedByEmployee INT NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
-    Balane MONEY DEFAULT 0.0,
-    [Status] VARCHAR(10) NOT NULL
-);
-
---Table Transaction
-CREATE TABLE [Transaction](
-	TransactionID INT NOT NULL PRIMARY KEY,
+CREATE TABLE Card(
+    CardID INT PRIMARY KEY,
     AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
-    CardID INT FOREIGN KEY REFERENCES [Card](CardID),
+    CardTypeID INT FOREIGN KEY REFERENCES CardType(CardTypeID),
+    ApprovedBY INT FOREIGN KEY REFERENCES Employee(EmployeeID),
+    CreditCardName VARCHAR(20),
+    CreditCardProviderID INT FOREIGN KEY REFERENCES CreditCardProvider(CreditCardProviderID),
+    Balance MONEY,
+    Status VARCHAR(10),
+    InterestRate FLOAT
+);
+
+
+-- Is it if I put the Beneficiary ID as Foreign key? 
+-- Remove loan id from the table in the erd
+CREATE TABLE TransactionTable(
+    TransactionID INT PRIMARY KEY,
+    AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
+    CardID INT FOREIGN KEY REFERENCES Card(CardID),
     InsuranceID INT FOREIGN KEY REFERENCES Insurance(InsuranceID),
-	BeneficiaryAccountID INT FOREIGN KEY REFERENCES Account(AccountID),
-    Amount MONEY NOT NULL,
-    TransactionDate VARCHAR(10) NOT NULL
+    LoanID INT FOREIGN KEY REFERENCES Loan(LoanID),
+    BeneficiaryAccountID INT FOREIGN KEY REFERENCES Account(AccountID),
+    PaymentDate DATE,
+    TransactionAmount MONEY
 )
+
