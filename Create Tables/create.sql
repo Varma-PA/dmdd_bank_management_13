@@ -125,6 +125,13 @@ CREATE TABLE CreditCardProvider(
     Name VARCHAR(20)
 );
 
+CREATE TABLE CardType(
+    CardTypeID INT PRIMARY KEY,
+    Type VARCHAR(20),
+    CardDescription VARCHAR(MAX)
+);
+
+
 CREATE TABLE Card(
     CardID INT PRIMARY KEY,
     AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
