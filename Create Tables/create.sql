@@ -1,4 +1,4 @@
-/* Team 13
+/* Group 13
 INFO 6210 Database Management and Database Design
 P4
 Submitted by 
@@ -12,9 +12,9 @@ Vachana Belgai                    NUID :
 -- Creation of Tables for our Database Implementation
 
 --Create database
-CREATE DATABASE BankManagementSystem;
+CREATE DATABASE BankManagementGroup13;
 
-USE BankManagementSystem;
+USE BankManagementGroup13;
 
 --Table Branch
 
