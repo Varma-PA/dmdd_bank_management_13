@@ -83,11 +83,11 @@ CREATE TABLE Account(
     Balance MONEY DEFAULT 0.0
 );
 
--- CREATE TABLE InsuranceType(
---     InsuranceTypeID INT PRIMARY KEY,
---     InsuranceName VARCHAR(10),
---     InsuranceDescription VARCHAR(50)
--- );
+CREATE TABLE InsuranceType(
+    InsuranceTypeID INT PRIMARY KEY,
+    InsuranceName VARCHAR(10),
+    InsuranceDescription VARCHAR(50)
+);
 
 --Table Insurance
 CREATE TABLE Insurance(
@@ -100,11 +100,11 @@ CREATE TABLE Insurance(
 );
 
 
--- CREATE TABLE LoanType(
---     LoanTypeID INT PRIMARY KEY,
---     LoanType VARCHAR(10),
---     LoanDescription VARCHAR(50)
--- );
+CREATE TABLE LoanType(
+    LoanTypeID INT PRIMARY KEY,
+    LoanType VARCHAR(10),
+    LoanDescription VARCHAR(50)
+);
 
 --Table Loan
 CREATE TABLE Loan(
