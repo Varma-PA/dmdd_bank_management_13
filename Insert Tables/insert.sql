@@ -1,4 +1,3 @@
-
 -- Inserting into Insurance Type
 
 INSERT INTO dbo.InsuranceType VALUES (1, 'Life Insurance', 'This is a Life Insurance');
@@ -26,5 +25,10 @@ INSERT INTO dbo.LoanType VALUES (9, 'Land Loan', 'This is Credit-builder Loan');
 INSERT INTO dbo.LoanType VALUES (10, 'Small Quick Loan', 'This is Small Quick Loan');
 
 
-
-
+-- Inserting into Card Type
+INSERT INTO dbo.CardType VALUES (1, 'Credit Card', 'A credit card allows you to make purchases and pay for them later');
+INSERT INTO dbo.CardType VALUES (2, 'Debit Card', 'A payment card that can be used in place of cash to make purchases');
+INSERT INTO dbo.CardType VALUES (3, 'ATM Card', 'An ATM card allows a customer only to withdraw money from an ATM');
+INSERT INTO dbo.CardType VALUES (4, 'Prepaid Card', 'A card you can use to pay for things that is placed in the prepaid card account in advance');
+INSERT INTO dbo.CardType VALUES (5, 'Gift Card', 'A prepaid debit card that is loaded with a specific amount, which can then be used to make purchases and other financial transactions');
+INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone and can be used to pay contactless in stores or online');
