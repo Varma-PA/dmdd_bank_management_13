@@ -85,7 +85,7 @@ CREATE TABLE Account(
 
 CREATE TABLE InsuranceType(
     InsuranceTypeID INT PRIMARY KEY,
-    InsuranceName VARCHAR(10),
+    InsuranceName VARCHAR(30),
     InsuranceDescription VARCHAR(50)
 );
 
@@ -102,7 +102,7 @@ CREATE TABLE Insurance(
 
 CREATE TABLE LoanType(
     LoanTypeID INT PRIMARY KEY,
-    LoanType VARCHAR(10),
+    LoanType VARCHAR(30),
     LoanDescription VARCHAR(50)
 );
 
