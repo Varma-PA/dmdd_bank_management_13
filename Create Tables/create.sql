@@ -36,7 +36,7 @@ CREATE TABLE Person(
     LastName VARCHAR(20),
     DateOfBirth DATE NOT NULL,
     SSN VARCHAR(50),
-    Email VARCHAR(20),
+    Email VARCHAR(50),
 	PhoneNumber CHAR(10) NOT NULL CHECK (PhoneNumber like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
     [Address] VARCHAR(MAX) NOT NULL,
     City VARCHAR(20) NOT NULL,
