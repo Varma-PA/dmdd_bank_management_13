@@ -32,3 +32,27 @@ INSERT INTO dbo.CardType VALUES (3, 'ATM Card', 'An ATM card allows a customer o
 INSERT INTO dbo.CardType VALUES (4, 'Prepaid Card', 'A card you can use to pay for things that is placed in the prepaid card account in advance');
 INSERT INTO dbo.CardType VALUES (5, 'Gift Card', 'A prepaid debit card that is loaded with a specific amount, which can then be used to make purchases and other financial transactions');
 INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone and can be used to pay contactless in stores or online');
+
+--Person Table
+INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN], [Email], [PhoneNumber], [Address], [City], [State], [ZipCode]) VALUES
+(101, 'Liam', 'Ira', CAST('1960-01-20' AS Date), '8776598', 'liamiran@gmail.com', '4133211531', 'Mcgreevey Way', 'Bosto', 'MA', '02120'),
+(102, 'Cassia', 'Smith', CAST('1960-09-28' AS Date), '6552187', 'smith.c@gmail.com', '4133211542', 'Smith', 'Housto', 'TX', '04128'),
+(103, 'Jim', 'Kelly', CAST('1960-05-19' AS Date), '8741987', 'kelly.jim@gmail.com', '4133211553', 'Ponce', 'Natick', 'MA', '02128'),
+(104, 'Da', 'Rock', CAST('1999-11-22' AS Date), '5813981', 'rocky22@yahoo.com', '4133215144', 'Horado', 'Waltham', 'MA', '02116'),
+(105, 'Kelly', 'Smith', CAST('1995-02-21' AS Date), '4719832', 'smith.kelly@gmail.com', '4133211568', 'Park Street', 'Allston', 'TX', '12021'),
+(106, 'Pharell', 'Ira', CAST('1970-01-29' AS Date), '2087615', 'iranpharell@gmail.com', '4133211519', 'Norway', 'Portland', 'OR', '74074'),
+(107, 'Joel', 'Dough', CAST('1992-02-22' AS Date), '3498109', 'doughjoe1992@gmail.com', '4133115011', 'Tremont', 'Stillwater', 'OK', '88123'),
+(108, 'Louis', 'Smith', CAST('1990-08-22' AS Date), '8761230', 'smith.louis@gmail.com', '4133215300', 'Ward', 'Manhatta', 'NY', '03412'),
+(109, 'Kare', 'Lee', CAST('1980-02-23' AS Date), '7812450', 'karen.lee@gmail.com', '4133211506', 'Fenway', 'Michiga', 'MI', '44210'),
+(110, 'Larry', 'Dennis', CAST('1991-02-22' AS Date), '9812091', 'dennis1991@yahoo.com', '4133315807', 'Roxburry', 'San Jose', 'CA', '02120'),
+(111, 'Zara', 'Larso', CAST('1964-12-12' AS Date), '9812121', 'wittyzara@hotmail.com', '4133211513', 'Mcgreevey Way', 'Bosto', 'MA', '04128'),
+(112, 'Edward', 'Pattinso', CAST('1998-12-01' AS Date), '8232091', 'edward98@gmail.com', '4133215244', 'Smith', 'Housto', 'TX', '02128'),
+(113, 'Mary', 'Louis', CAST('1966-01-01' AS Date), '7812440', 'louis.mary66@gmail.com', '4133111538', 'Ponce', 'Natick', 'MA', '02116'),
+(114, 'Hazel', 'Lobo', CAST('1967-12-20' AS Date), '8741287', 'lobohazel20@gmail.com', '4133911519', 'Horado', 'Waltham', 'MA', '12021'),
+(115, 'Ankita', 'Kumari', CAST('1998-12-25' AS Date), '5123481', 'kumari.a@yahoo.com', '4133515011', 'Park Street', 'Allston', 'TX', '74074'),
+(116, 'Achyth', 'Varma', CAST('1969-01-12' AS Date), '4719812', 'varma.achyuth@gmail.com', '4133715300', 'Norway', 'Portland', 'OR', '74074'),
+(117, 'Vachana', 'Belgavi', CAST('1962-02-12' AS Date), '2032615', 'belgavi.v@gmail.com', '4133311553', 'Tremont', 'Stillwater', 'OK', '88123'),
+(118, 'Shraddha', 'Baheti', CAST('1994-04-12' AS Date), '3231109', 'baheti.shraddha@gmail.com', '4133315144', 'Ward', 'Manhatta', 'NY', '44210'),
+(119, 'Sanjana', 'Chatti', CAST('1950-12-12' AS Date), '8451230', 'chatti.s@gmail.com', '4133311568', 'Fenway', 'Michiga', 'MI', '02120'),
+(120, 'Mak', 'Weins', CAST('1998-01-06' AS Date), '8147230', 'weins.mark@yahoo.com', '4133311519', 'Roxburry', 'San Jose', 'CA', '74074');
+
