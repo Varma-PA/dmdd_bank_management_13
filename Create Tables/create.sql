@@ -50,6 +50,8 @@ CREATE TABLE EmployeeType(
     [Type] VARCHAR(10) NOT NULL
 );
 
+ALTER TABLE EmployeeType ALTER COLUMN [Type] VARCHAR(50) NOT NULL
+
 --Table Employee
 CREATE TABLE Employee(
     EmployeeID INT NOT NULL PRIMARY KEY,
