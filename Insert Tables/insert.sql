@@ -69,15 +69,16 @@ INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN]
 (119, 'Sanjana', 'Chatti', CAST('1950-12-12' AS Date), '8451230', 'chatti.s@gmail.com', '4133311568', 'Fenway', 'Michiga', 'MI', '02120'),
 (120, 'Mak', 'Weins', CAST('1998-01-06' AS Date), '8147230', 'weins.mark@yahoo.com', '4133311519', 'Roxburry', 'San Jose', 'CA', '74074');
 
---Inserting into Employee Type
+
+-- Employee Type
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (201, 'Branch Manager');
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (202, 'Account Creator');
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (203, 'Loan Approver');
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (204, 'Insurance Approver');
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (205, 'Card Approver');
 
---Inserting into Employee
 
+-- Employee
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (900, 201, 111, 111);
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (901, 202, 111, 112);
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (902, 203, 111, 113);
@@ -88,6 +89,7 @@ INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (907, 203, 112, 118);
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (908, 204, 112, 119);
 INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (909, 205, 112, 120);
+
 
 -- Customer Data
 INSERT INTO dbo.CustomerData VALUES (301, 101);
@@ -113,3 +115,26 @@ INSERT INTO dbo.CustomerFinancialHistory VALUES (407, 307, 590, 'Fair', '2022-02
 INSERT INTO dbo.CustomerFinancialHistory VALUES (408, 308, 671, 'Good', '2022-03-19');
 INSERT INTO dbo.CustomerFinancialHistory VALUES (409, 309, 741, 'Very Good', '2022-04-18');
 INSERT INTO dbo.CustomerFinancialHistory VALUES (410, 310, 804, 'Excellent', '2022-05-02');
+
+
+-- Account
+INSERT INTO dbo.Account VALUES (1001001234, 111, 301, 900, 'Savings', 12452);
+INSERT INTO dbo.Account VALUES (1001001235, 111, 301, 900, 'Checking', 731);
+INSERT INTO dbo.Account VALUES (1001001236, 112, 302, 901, 'Savings', 298);
+INSERT INTO dbo.Account VALUES (1001001237, 112, 302, 901, 'Checking', 13);
+INSERT INTO dbo.Account VALUES (1001001238, 113, 303, 902, 'Savings', 4764);
+INSERT INTO dbo.Account VALUES (1001001239, 113, 303, 902, 'Checking', 4008);
+INSERT INTO dbo.Account VALUES (1001001240, 114, 304, 903, 'Savings', 10007);
+INSERT INTO dbo.Account VALUES (1001001241, 114, 304, 903, 'Checking', 2056);
+INSERT INTO dbo.Account VALUES (1001001242, 115, 305, 904, 'Savings', 3684);
+INSERT INTO dbo.Account VALUES (1001001243, 115, 305, 904, 'Checking', 622);
+INSERT INTO dbo.Account VALUES (1001001244, 116, 306, 905, 'Savings', 456);
+INSERT INTO dbo.Account VALUES (1001001245, 116, 306, 905, 'Checking', 34);
+INSERT INTO dbo.Account VALUES (1001001246, 117, 307, 906, 'Savings', 86483);
+INSERT INTO dbo.Account VALUES (1001001247, 117, 307, 906, 'Checking', 6789);
+INSERT INTO dbo.Account VALUES (1001001248, 118, 308, 907, 'Savings', 2545);
+INSERT INTO dbo.Account VALUES (1001001249, 118, 308, 907, 'Checking', 767);
+INSERT INTO dbo.Account VALUES (1001001250, 119, 309, 908, 'Savings', 234);
+INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
+INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
+INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
