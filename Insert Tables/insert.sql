@@ -138,3 +138,18 @@ INSERT INTO dbo.Account VALUES (1001001250, 119, 309, 908, 'Savings', 234);
 INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
+
+-- insuranceTable
+INSERT into dbo.Insurance VALUES(101,1001001234,2,901,508,'Pending')
+INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000,'Approved')
+INSERT into dbo.Insurance VALUES(103,1001001244,1,903,589,'Pending')
+INSERT into dbo.Insurance VALUES(104,1001001236,5,904,2400,'Approved')
+INSERT into dbo.Insurance VALUES(105,1001001241,2,905,4000,'Pending')
+INSERT into dbo.Insurance VALUES(106,1001001235,1,906,3600,'Pending')
+INSERT into dbo.Insurance VALUES(107,1001001238,10,907,5100,'Approved')
+INSERT into dbo.Insurance VALUES(108,1001001243,9,908,903,'Pending')
+INSERT into dbo.Insurance VALUES(109,1001001251,4,908,836,'Approved')
+INSERT into dbo.Insurance VALUES(110,1001001252,7,901,1200,'Approved')
+INSERT into dbo.Insurance VALUES(111,1001001252,6,902,1011,'Pending')
+INSERT into dbo.Insurance VALUES(112,1001001240,8,909,1023,'Approved')
+INSERT into dbo.Insurance VALUES(113,1001001239,10,903,400,'Approved')
