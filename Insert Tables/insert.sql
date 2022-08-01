@@ -1,5 +1,4 @@
--- Inserting into Insurance Type
-
+-- Insurance Type
 INSERT INTO dbo.InsuranceType VALUES (1, 'Life Insurance', 'This is a Life Insurance');
 INSERT INTO dbo.InsuranceType VALUES (2, 'Health Insurance', 'This is a Health Insurance');
 INSERT INTO dbo.InsuranceType VALUES (3, 'Renters Insurance', 'This is a Renters Insurance');
@@ -11,8 +10,8 @@ INSERT INTO dbo.InsuranceType VALUES (8, 'Homeowner Insurance', 'This is a Homeo
 INSERT INTO dbo.InsuranceType VALUES (9, 'Funeral Insurance', 'This is Funeral Insurance');
 INSERT INTO dbo.InsuranceType VALUES (10, 'Pet Health Insurance', 'This is Pet Health Insurance');
 
--- Inserting into Loan Type
 
+-- Loan Type
 INSERT INTO dbo.LoanType VALUES (1, 'Personal Loan', 'This is Personal Loan');
 INSERT INTO dbo.LoanType VALUES (2, 'Gold Loan', 'This is Gold Loan');
 INSERT INTO dbo.LoanType VALUES (3, 'Education Loan', 'This is Education Loan');
@@ -25,17 +24,16 @@ INSERT INTO dbo.LoanType VALUES (9, 'Land Loan', 'This is Credit-builder Loan');
 INSERT INTO dbo.LoanType VALUES (10, 'Small Quick Loan', 'This is Small Quick Loan');
 
 
--- Inserting into Card Type
+-- Card Type
 INSERT INTO dbo.CardType VALUES (1, 'Credit Card', 'A credit card allows you to make purchases and pay for them later');
 INSERT INTO dbo.CardType VALUES (2, 'Debit Card', 'A payment card that can be used in place of cash to make purchases');
 INSERT INTO dbo.CardType VALUES (3, 'ATM Card', 'An ATM card allows a customer only to withdraw money from an ATM');
 INSERT INTO dbo.CardType VALUES (4, 'Prepaid Card', 'A card you can use to pay for things that is placed in the prepaid card account in advance');
 INSERT INTO dbo.CardType VALUES (5, 'Gift Card', 'A prepaid debit card that is loaded with a specific amount, which can then be used to make purchases and other financial transactions');
-INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone and can be used to pay contactless in stores or online');
+INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone and can be used to pay contactless in stores or online')
 
 
-
--- Inserting into BankBranch
+-- Bank Branch
 INSERT INTO dbo.InsuranceType VALUES (111, 'Newbury Street', '9876543210','newburystreet@gmail.com', '11th Newbury Street','Boston','Massachusetts', '02115');
 INSERT INTO dbo.InsuranceType VALUES (112, 'Roxbury','8765432109' ,'roxbury@gmail.com', '12th Roxbury Street','Boston','Massachusetts', '02116');
 INSERT INTO dbo.InsuranceType VALUES (113, 'Mission Hill','7654321098','missionhill@gmail.com','13th Mission Main Road','Boston','Massachusetts', '02117');
@@ -47,7 +45,8 @@ INSERT INTO dbo.InsuranceType VALUES (118, 'Commonwealth','2109876543','commonwe
 INSERT INTO dbo.InsuranceType VALUES (119, 'Oak Grove','1098765432','oakgrove@gmail.com', '19th Oak Grove Station','Boston','Massachusetts', '02111' );
 INSERT INTO dbo.InsuranceType VALUES (120, 'Forest Hill','1234567890', 'foresthill@gmail.com','20th Forest Hill Crossing','Boston','Massachusetts', '02109');
 
---Person Table
+
+-- Person
 INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN], [Email], [PhoneNumber], [Address], [City], [State], [ZipCode]) VALUES
 (101, 'Liam', 'Ira', CAST('1960-01-20' AS Date), '8776598', 'liamiran@gmail.com', '4133211531', 'Mcgreevey Way', 'Bosto', 'MA', '02120'),
 (102, 'Cassia', 'Smith', CAST('1960-09-28' AS Date), '6552187', 'smith.c@gmail.com', '4133211542', 'Smith', 'Housto', 'TX', '04128'),
@@ -78,3 +77,28 @@ INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (204, 'Insurance A
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (205, 'Card Approver');
 
 --Inserting into Employee
+
+-- Customer Data
+INSERT INTO dbo.CustomerData VALUES (301, 101);
+INSERT INTO dbo.CustomerData VALUES (302, 102);
+INSERT INTO dbo.CustomerData VALUES (303, 103);
+INSERT INTO dbo.CustomerData VALUES (304, 104);
+INSERT INTO dbo.CustomerData VALUES (305, 105);
+INSERT INTO dbo.CustomerData VALUES (306, 106);
+INSERT INTO dbo.CustomerData VALUES (307, 107);
+INSERT INTO dbo.CustomerData VALUES (308, 108);
+INSERT INTO dbo.CustomerData VALUES (309, 109);
+INSERT INTO dbo.CustomerData VALUES (310, 110);
+
+
+-- Customer Financial History
+INSERT INTO dbo.CustomerFinancialHistory VALUES (401, 301, 365, 'Poor', '2022-01-23');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (402, 302, 593, 'Fair', '2021-11-16');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (403, 303, 715, 'Good', '2022-07-31');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (404, 304, 778, 'Very Good', '2022-03-17');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (405, 305, 825, 'Excellent', '2021-09-05');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (406, 306, 570, 'Poor', '2021-12-09');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (407, 307, 590, 'Fair', '2022-02-14');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (408, 308, 671, 'Good', '2022-03-19');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (409, 309, 741, 'Very Good', '2022-04-18');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (410, 310, 804, 'Excellent', '2022-05-02');
