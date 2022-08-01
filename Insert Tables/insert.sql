@@ -70,3 +70,11 @@ INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN]
 (119, 'Sanjana', 'Chatti', CAST('1950-12-12' AS Date), '8451230', 'chatti.s@gmail.com', '4133311568', 'Fenway', 'Michiga', 'MI', '02120'),
 (120, 'Mak', 'Weins', CAST('1998-01-06' AS Date), '8147230', 'weins.mark@yahoo.com', '4133311519', 'Roxburry', 'San Jose', 'CA', '74074');
 
+--Inserting into Employee Type
+INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (201, 'Branch Manager');
+INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (202, 'Account Creator');
+INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (203, 'Loan Approver');
+INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (204, 'Insurance Approver');
+INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (205, 'Card Approver');
+
+--Inserting into Employee
