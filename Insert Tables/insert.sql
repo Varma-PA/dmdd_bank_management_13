@@ -36,16 +36,16 @@ INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone a
 
 
 -- Inserting into BankBranch
-INSERT INTO dbo.InsuranceType VALUES (111, 'Newbury Street', '9876543210','newburystreet@gmail.com', '11th Newbury Street','Boston','Massachusetts', '02115');
-INSERT INTO dbo.InsuranceType VALUES (112, 'Roxbury','8765432109' ,'roxbury@gmail.com', '12th Roxbury Street','Boston','Massachusetts', '02116');
-INSERT INTO dbo.InsuranceType VALUES (113, 'Mission Hill','7654321098','missionhill@gmail.com','13th Mission Main Road','Boston','Massachusetts', '02117');
-INSERT INTO dbo.InsuranceType VALUES (114, 'Calumet Street','6543210987','calumetstreet@gmail.com','14th Calumet Street','Boston','Massachusetts', '02118');
-INSERT INTO dbo.InsuranceType VALUES (115, 'Down Town','5432109876', 'downtown@gmail.com','15th Down Town Road','Boston','Massachusetts', '02114');
-INSERT INTO dbo.InsuranceType VALUES (116, 'Massachusetts Avenue', '4321098765','massavenue@gmail.com','16th Maasachusettes Avenue','Boston','Massachusetts', '02113');
-INSERT INTO dbo.InsuranceType VALUES (117, 'Back Bay','3210987654','backbay@gmail.com','17th Back Bay Avenue','Boston','Massachusetts', '02112');
-INSERT INTO dbo.InsuranceType VALUES (118, 'Commonwealth','2109876543','commonwealth@gmail.com','18th Commonwealth Road','Boston','Massachusetts', '02111' );
-INSERT INTO dbo.InsuranceType VALUES (119, 'Oak Grove','1098765432','oakgrove@gmail.com', '19th Oak Grove Station','Boston','Massachusetts', '02111' );
-INSERT INTO dbo.InsuranceType VALUES (120, 'Forest Hill','1234567890', 'foresthill@gmail.com','20th Forest Hill Crossing','Boston','Massachusetts', '02109');
+INSERT INTO dbo.BankBranch VALUES (111, 'Newbury Street', '9876543210','newburystreet@gmail.com', '11th Newbury Street','Boston','Massachusetts', '02115');
+INSERT INTO dbo.BankBranch VALUES (112, 'Roxbury','8765432109' ,'roxbury@gmail.com', '12th Roxbury Street','Boston','Massachusetts', '02116');
+INSERT INTO dbo.BankBranch VALUES (113, 'Mission Hill','7654321098','missionhill@gmail.com','13th Mission Main Road','Boston','Massachusetts', '02117');
+INSERT INTO dbo.BankBranch VALUES (114, 'Calumet Street','6543210987','calumetstreet@gmail.com','14th Calumet Street','Boston','Massachusetts', '02118');
+INSERT INTO dbo.BankBranch VALUES (115, 'Down Town','5432109876', 'downtown@gmail.com','15th Down Town Road','Boston','Massachusetts', '02114');
+INSERT INTO dbo.BankBranch VALUES (116, 'Massachusetts Avenue', '4321098765','massavenue@gmail.com','16th Maasachusettes Avenue','Boston','Massachusetts', '02113');
+INSERT INTO dbo.BankBranch VALUES (117, 'Back Bay','3210987654','backbay@gmail.com','17th Back Bay Avenue','Boston','Massachusetts', '02112');
+INSERT INTO dbo.BankBranch VALUES (118, 'Commonwealth','2109876543','commonwealth@gmail.com','18th Commonwealth Road','Boston','Massachusetts', '02111' );
+INSERT INTO dbo.BankBranch VALUES (119, 'Oak Grove','1098765432','oakgrove@gmail.com', '19th Oak Grove Station','Boston','Massachusetts', '02111' );
+INSERT INTO dbo.BankBranch VALUES (120, 'Forest Hill','1234567890', 'foresthill@gmail.com','20th Forest Hill Crossing','Boston','Massachusetts', '02109');
 
 --Person Table
 INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN], [Email], [PhoneNumber], [Address], [City], [State], [ZipCode]) VALUES
