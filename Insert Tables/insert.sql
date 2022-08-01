@@ -46,7 +46,6 @@ INSERT INTO dbo.BankBranch VALUES (119, 'Oak Grove','1098765432','oakgrove@gmail
 INSERT INTO dbo.BankBranch VALUES (120, 'Forest Hill','1234567890', 'foresthill@gmail.com','20th Forest Hill Crossing','Boston','Massachusetts', '02109');
 
 
-
 -- Person
 INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN], [Email], [PhoneNumber], [Address], [City], [State], [ZipCode]) VALUES
 (101, 'Liam', 'Ira', CAST('1960-01-20' AS Date), '8776598', 'liamiran@gmail.com', '4133211531', 'Mcgreevey Way', 'Bosto', 'MA', '02120'),
@@ -78,6 +77,17 @@ INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (204, 'Insurance A
 INSERT [dbo].[EmployeeType] ([EmployeeTypeID], [Type]) VALUES (205, 'Card Approver');
 
 --Inserting into Employee
+
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (900, 201, 111, 111);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (901, 202, 111, 112);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (902, 203, 111, 113);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (903, 204, 111, 114);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (904, 205, 111, 115);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (905, 201, 112, 116);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (906, 202, 112, 117);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (907, 203, 112, 118);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (908, 204, 112, 119);
+INSERT [dbo].[Employee] ([EmployeeID], [EmployeeTypeID], [BranchCode], [PersonID]) VALUES (909, 205, 112, 120);
 
 -- Customer Data
 INSERT INTO dbo.CustomerData VALUES (301, 101);
