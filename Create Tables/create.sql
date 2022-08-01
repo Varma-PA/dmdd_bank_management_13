@@ -29,6 +29,7 @@ CREATE TABLE BankBranch(
 	ZipCode CHAR(5) NOT NULL CHECK (ZipCode like '[0-9][0-9][0-9][0-9][0-9]')
 );
 
+ALTER TABLE BankBranch ALTER COLUMN  Email VARCHAR(50);
 -- Table Person
 CREATE TABLE Person(
     PersonID INT NOT NULL PRIMARY KEY,
