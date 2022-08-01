@@ -2,11 +2,11 @@
 INFO 6210 Database Management and Database Design
 P4
 Submitted by 
-Sree Achyutha Penmetcha           NUID : 
-Ankita Kumari                     NUID : 
-Hazel Lobo						  NUID : 001001740
-Sanjana Chatti                    NUID : 
-Vachana Belgai                    NUID : 
+Sree Achyutha Penmetcha             NUID : 
+Ankita Kumari                       NUID : 
+Hazel Lobo                          NUID : 001001740
+Sanjana Chatti                      NUID : 
+Vachana Belgavi                     NUID : 002101078
 */
 
 -- Creation of Tables for our Database Implementation
@@ -159,5 +159,4 @@ CREATE TABLE TransactionTable(
     BeneficiaryAccountID INT FOREIGN KEY REFERENCES Account(AccountID),
     PaymentDate DATE,
     TransactionAmount MONEY
-)
-
+);
