@@ -176,30 +176,30 @@ INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, Appro
 
 
 -- credit_cardprovider
-INSERT into dbo.CreditCardProvider VALUES(1,"Chase")
-INSERT into dbo.CreditCardProvider VALUES(2,"discover")
-INSERT into dbo.CreditCardProvider VALUES(3,"bank of america")
-INSERT into dbo.CreditCardProvider VALUES(4,"american express")
-INSERT into dbo.CreditCardProvider VALUES(5,"capital one")
-INSERT into dbo.CreditCardProvider VALUES(6,"citibank")
-INSERT into dbo.CreditCardProvider VALUES(7,"wells Fargo")
-INSERT into dbo.CreditCardProvider VALUES(8,"Barclays")
-INSERT into dbo.CreditCardProvider VALUES(9,"synchrony")
+INSERT into dbo.CreditCardProvider VALUES(1,'Chase');
+INSERT into dbo.CreditCardProvider VALUES(2,'Discover');
+INSERT into dbo.CreditCardProvider VALUES(3,'Bank of America');
+INSERT into dbo.CreditCardProvider VALUES(4,'American Express');
+INSERT into dbo.CreditCardProvider VALUES(5,'Capital One');
+INSERT into dbo.CreditCardProvider VALUES(6,'Citibank');
+INSERT into dbo.CreditCardProvider VALUES(7,'Wells Fargo');
+INSERT into dbo.CreditCardProvider VALUES(8,'Barclays');
+INSERT into dbo.CreditCardProvider VALUES(9,'Synchrony');
 
 
 
 
 --  card
-INSERT into dbo.card VALUES(1,1001001234,1,900,"Platinum Card",1,900,"Approved",7.2)
-INSERT into dbo.card VALUES(2,1001001245,4,903,"Travel card",4,750,"Approved",6)
-INSERT into dbo.card VALUES(3,1001001247,3,904,"Forex card",4,890,"Approved",6.2)
-INSERT into dbo.card VALUES(4,1001001232,3,902,"Travel card",7,600,"pending",4)
-INSERT into dbo.card VALUES(5,1001001230,3,903,"Platinum Card",2,500,"Approved",6)
-INSERT into dbo.card VALUES(6,1001001222,2,904,"Store credit card",1,700,"Approved",6)
-INSERT into dbo.card VALUES(7,1001001249,1,906,"Business Card",9,900,"Approved",5.5)
-INSERT into dbo.card VALUES(8,1001001224,6,905,"Student Card",3,490,"Approved",6)
-INSERT into dbo.card VALUES(9,1001001231,4,903,"Gold Card",2,890,"Approved",5.5)
-INSERT into dbo.card VALUES(10,1001001227,5,900,"Platinum Card",6,2000,"Approved",5.6)
-INSERT into dbo.card VALUES(11,1001001236,6,901,"Business Card",8,900,"pending",6)
-INSERT into dbo.card VALUES(12,1001001229,2,902,"Platinum Card",5,2000,"Approved",5.5)
+INSERT into dbo.card VALUES(1,1001001234,1,900,'Platinum Card',1,900,'Approved',7.2);
+INSERT into dbo.card VALUES(2,1001001245,4,903,'Travel Card',4,750,"Approved",6);
+INSERT into dbo.card VALUES(3,1001001247,3,904,'Forex Card',4,890,"Approved",6.2);
+INSERT into dbo.card VALUES(4,1001001232,3,902,'Travel Card',7,600,"pending",4);
+INSERT into dbo.card VALUES(5,1001001230,3,903,'Platinum Card',2,500,"Approved",6);
+INSERT into dbo.card VALUES(6,1001001222,2,904,'Store Credit Card',1,700,"Approved",6);
+INSERT into dbo.card VALUES(7,1001001249,1,906,'Business Card',9,900,"Approved",5.5);
+INSERT into dbo.card VALUES(8,1001001224,6,905,'Student Card',3,490,"Approved",6);
+INSERT into dbo.card VALUES(9,1001001231,4,903,'Gold Card',2,890,"Approved",5.5);
+INSERT into dbo.card VALUES(10,1001001227,5,900,'Platinum Card',6,2000,"Approved",5.6);
+INSERT into dbo.card VALUES(11,1001001236,6,901,'Business Card',8,900,"pending",6);
+INSERT into dbo.card VALUES(12,1001001229,2,902,'Platinum Card',5,2000,"Approved",5.5);
 
