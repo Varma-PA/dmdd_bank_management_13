@@ -139,6 +139,23 @@ INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
 
+
+-- insuranceTable
+INSERT into dbo.Insurance VALUES(101,1001001234,2,901,508,'Pending')
+INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000,'Approved')
+INSERT into dbo.Insurance VALUES(103,1001001244,1,903,589,'Pending')
+INSERT into dbo.Insurance VALUES(104,1001001236,5,904,2400,'Approved')
+INSERT into dbo.Insurance VALUES(105,1001001241,2,905,4000,'Pending')
+INSERT into dbo.Insurance VALUES(106,1001001235,1,906,3600,'Pending')
+INSERT into dbo.Insurance VALUES(107,1001001238,10,907,5100,'Approved')
+INSERT into dbo.Insurance VALUES(108,1001001243,9,908,903,'Pending')
+INSERT into dbo.Insurance VALUES(109,1001001251,4,908,836,'Approved')
+INSERT into dbo.Insurance VALUES(110,1001001252,7,901,1200,'Approved')
+INSERT into dbo.Insurance VALUES(111,1001001252,6,902,1011,'Pending')
+INSERT into dbo.Insurance VALUES(112,1001001240,8,909,1023,'Approved')
+INSERT into dbo.Insurance VALUES(113,1001001239,10,903,400,'Approved')
+
+
 -- Inserting Loan
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(101, 1001001235, 1, 902, 500000, 2000, '2008-06-12', 30000, '2021-02-05');
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(102, 1001001237, 2, 902, 2000000, 300000, '2009-04-12', 1000000, '2020-03-03');
@@ -154,5 +171,10 @@ INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, Appro
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(111, 1001001235, 1, 907, 40000, 10000, '2018-08-19', 30000, '2020-04-18');
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(112, 1001001237, 1, 902, 60000, 30000, '2018-09-19', 60000, '2020-04-07');
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(113, 1001001239, 1, 907, 50000, 10000, '2017-08-18', 50000, '2021-04-08');
+
+
+
+
+
 
 
