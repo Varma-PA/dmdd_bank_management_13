@@ -175,5 +175,15 @@ INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, Appro
 
 
 
+-- credit_cardprovider
+INSERT into dbo.CreditCardProvider VALUES(1,"Chase")
+INSERT into dbo.CreditCardProvider VALUES(2,"discover")
+INSERT into dbo.CreditCardProvider VALUES(3,"bank of america")
+INSERT into dbo.CreditCardProvider VALUES(4,"american express")
+INSERT into dbo.CreditCardProvider VALUES(5,"capital one")
+INSERT into dbo.CreditCardProvider VALUES(6,"citibank")
+INSERT into dbo.CreditCardProvider VALUES(7,"wells Fargo")
+INSERT into dbo.CreditCardProvider VALUES(8,"Barclays")
+INSERT into dbo.CreditCardProvider VALUES(9,"synchrony")
 
 
