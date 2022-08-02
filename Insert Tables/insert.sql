@@ -187,3 +187,19 @@ INSERT into dbo.CreditCardProvider VALUES(8,"Barclays")
 INSERT into dbo.CreditCardProvider VALUES(9,"synchrony")
 
 
+
+
+--  card
+INSERT into dbo.card VALUES(1,1001001234,1,900,"Platinum Card",1,900,"Approved",7.2)
+INSERT into dbo.card VALUES(2,1001001245,4,903,"Travel card",4,750,"Approved",6)
+INSERT into dbo.card VALUES(3,1001001247,3,904,"Forex card",4,890,"Approved",6.2)
+INSERT into dbo.card VALUES(4,1001001232,3,902,"Travel card",7,600,"pending",4)
+INSERT into dbo.card VALUES(5,1001001230,3,903,"Platinum Card",2,500,"Approved",6)
+INSERT into dbo.card VALUES(6,1001001222,2,904,"Store credit card",1,700,"Approved",6)
+INSERT into dbo.card VALUES(7,1001001249,1,906,"Business Card",9,900,"Approved",5.5)
+INSERT into dbo.card VALUES(8,1001001224,6,905,"Student Card",3,490,"Approved",6)
+INSERT into dbo.card VALUES(9,1001001231,4,903,"Gold Card",2,890,"Approved",5.5)
+INSERT into dbo.card VALUES(10,1001001227,5,900,"Platinum Card",6,2000,"Approved",5.6)
+INSERT into dbo.card VALUES(11,1001001236,6,901,"Business Card",8,900,"pending",6)
+INSERT into dbo.card VALUES(12,1001001229,2,902,"Platinum Card",5,2000,"Approved",5.5)
+
