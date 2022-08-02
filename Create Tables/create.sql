@@ -151,7 +151,7 @@ CREATE TABLE Card(
 -- Is it if I put the Beneficiary ID as Foreign key? 
 -- Remove loan id from the table in the erd
 CREATE TABLE TransactionTable(
-    TransactionID INT PRIMARY KEY,
+    TransactionID INT IDENTITY PRIMARY KEY,
     AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
     CardID INT FOREIGN KEY REFERENCES Card(CardID),
     InsuranceID INT FOREIGN KEY REFERENCES Insurance(InsuranceID),
