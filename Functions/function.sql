@@ -68,3 +68,24 @@ BEGIN
 END
 GO
 
+--------------------------------------------------------
+--TABLE-LEVEL CONSTRAINT FUNCTION 
+GO
+CREATE OR ALTER FUNCTION isPersonRegistered(@firstName VARCHAR(20), @lastName VARCHAR(20), @SSN CHAR(50))
+RETURNS INT
+AS
+
+BEGIN
+
+   DECLARE @COUNT AS INT;
+
+   SELECT @COUNT = COUNT(PersonID) FROM Person
+   WHERE FirstName = @firstName AND LastName = @lastName AND SSN = @SSN;
+
+   RETURN @COUNT;
+
+END
+GO
+
+ALTER TABLE Person WITH NOCHECK ADD CONSTRAINT checkRegisteredPerson
+CHECK (dbo.isPersonRegistered(FirstName, LastName, SSN) = 0);
