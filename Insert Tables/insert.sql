@@ -141,19 +141,19 @@ INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
 
 
 -- insuranceTable
-INSERT into dbo.Insurance VALUES(101,1001001234,2,901,508,'Pending');
-INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000,'Approved');
-INSERT into dbo.Insurance VALUES(103,1001001244,1,903,589,'Pending');
-INSERT into dbo.Insurance VALUES(104,1001001236,5,904,2400,'Approved');
-INSERT into dbo.Insurance VALUES(105,1001001241,2,905,4000,'Pending');
-INSERT into dbo.Insurance VALUES(106,1001001235,1,906,3600,'Pending');
-INSERT into dbo.Insurance VALUES(107,1001001238,10,907,5100,'Approved');
-INSERT into dbo.Insurance VALUES(108,1001001243,9,908,903,'Pending');
-INSERT into dbo.Insurance VALUES(109,1001001251,4,908,836,'Approved');
-INSERT into dbo.Insurance VALUES(110,1001001252,7,901,1200,'Approved');
-INSERT into dbo.Insurance VALUES(111,1001001252,6,902,1011,'Pending');
-INSERT into dbo.Insurance VALUES(112,1001001240,8,909,1023,'Approved');
-INSERT into dbo.Insurance VALUES(113,1001001239,10,903,400,'Approved');
+INSERT into dbo.Insurance VALUES(101,1001001234,2,901,500000,'Pending');
+INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000000,'Approved');
+INSERT into dbo.Insurance VALUES(103,1001001244,1,903,200000,'Pending');
+INSERT into dbo.Insurance VALUES(104,1001001236,5,904,3000000,'Approved');
+INSERT into dbo.Insurance VALUES(105,1001001241,2,905,100000,'Pending');
+INSERT into dbo.Insurance VALUES(106,1001001235,1,906,450000,'Pending');
+INSERT into dbo.Insurance VALUES(107,1001001238,10,907,90000,'Approved');
+INSERT into dbo.Insurance VALUES(108,1001001243,9,908,90000,'Pending');
+INSERT into dbo.Insurance VALUES(109,1001001251,4,908,400000,'Approved');
+INSERT into dbo.Insurance VALUES(110,1001001252,7,901,10000,'Approved');
+INSERT into dbo.Insurance VALUES(111,1001001252,6,902,100000,'Pending');
+INSERT into dbo.Insurance VALUES(112,1001001240,8,909,300000,'Approved');
+INSERT into dbo.Insurance VALUES(113,1001001239,10,903,50000,'Approved');
 
 
 -- Inserting Loan
@@ -176,30 +176,30 @@ INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, Appro
 
 
 -- credit_cardprovider
-INSERT into dbo.CreditCardProvider VALUES(1,'Chase');
-INSERT into dbo.CreditCardProvider VALUES(2,'Discover');
-INSERT into dbo.CreditCardProvider VALUES(3,'Bank of America');
-INSERT into dbo.CreditCardProvider VALUES(4,'American Express');
-INSERT into dbo.CreditCardProvider VALUES(5,'Capital One');
-INSERT into dbo.CreditCardProvider VALUES(6,'Citibank');
-INSERT into dbo.CreditCardProvider VALUES(7,'Wells Fargo');
-INSERT into dbo.CreditCardProvider VALUES(8,'Barclays');
-INSERT into dbo.CreditCardProvider VALUES(9,'Synchrony');
+INSERT into dbo.CardProvider VALUES(1,'Chase');
+INSERT into dbo.CardProvider VALUES(2,'Discover');
+INSERT into dbo.CardProvider VALUES(3,'Bank of America');
+INSERT into dbo.CardProvider VALUES(4,'American Express');
+INSERT into dbo.CardProvider VALUES(5,'Capital One');
+INSERT into dbo.CardProvider VALUES(6,'Citibank');
+INSERT into dbo.CardProvider VALUES(7,'Wells Fargo');
+INSERT into dbo.CardProvider VALUES(8,'Barclays');
+INSERT into dbo.CardProvider VALUES(9,'Synchrony');
 
 
 
 
 --  card
-INSERT into dbo.card VALUES(1,1001001234,1,900,'Platinum Card',1,900,'Approved',7.2);
-INSERT into dbo.card VALUES(2,1001001245,4,903,'Travel Card',4,750,'Approved',6);
-INSERT into dbo.card VALUES(3,1001001247,3,904,'Forex Card',4,890,'Approved',6.2);
-INSERT into dbo.card VALUES(4, 1001001242,3,902,'Travel Card',7,600,'Pending',4);
-INSERT into dbo.card VALUES(5,1001001250,3,903,'Platinum Card',2,500,'Approved',6);
-INSERT into dbo.card VALUES(6,1001001252,2,904,'Store Credit Card',1,700,'Approved',6);
-INSERT into dbo.card VALUES(7,1001001249,1,906,'Business Card',9,900,'Approved',5.5);
-INSERT into dbo.card VALUES(8,1001001244,6,905,'Student Card',3,490,'Approved',6);
-INSERT into dbo.card VALUES(9,1001001241,4,903,'Gold Card',2,890,'Approved',5.5);
-INSERT into dbo.card VALUES(10,1001001237,5,900,'Platinum Card',6,2000,'Approved',5.6);
-INSERT into dbo.card VALUES(11,1001001236,6,901,'Business Card',8,900,'Pending',6);
-INSERT into dbo.card VALUES(12,1001001239,2,902,'Platinum Card',5,2000,'Approved',5.5);
+INSERT into dbo.card VALUES(1,1001001234,1,900,1,900,'Approved',7.2);
+INSERT into dbo.card VALUES(2,1001001245,4,903 ,4,750,'Approved',6);
+INSERT into dbo.card VALUES(3,1001001247,3,904, 4,890,'Approved',6.2);
+INSERT into dbo.card VALUES(4, 1001001242,3,902,7,600,'Pending',4);
+INSERT into dbo.card VALUES(5,1001001250,3,903, 2,500,'Approved',6);
+INSERT into dbo.card VALUES(6,1001001252,2,904, 1,700,'Approved',6);
+INSERT into dbo.card VALUES(7,1001001249,1,906, 9,900,'Approved',5.5);
+INSERT into dbo.card VALUES(8,1001001244,6,905, 3,490,'Approved',6);
+INSERT into dbo.card VALUES(9,1001001241,4,903, 2,890,'Approved',5.5);
+INSERT into dbo.card VALUES(10,1001001237,5,900, 6,2000,'Approved',5.6);
+INSERT into dbo.card VALUES(11,1001001236,6,901, 8,900,'Pending',6);
+INSERT into dbo.card VALUES(12,1001001239,2,902, 5,2000,'Approved',5.5);
 

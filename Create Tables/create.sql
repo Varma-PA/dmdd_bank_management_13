@@ -122,8 +122,8 @@ CREATE TABLE Loan(
 );
 
 -- This table stores the different credit card providers such as Visa, Mastercard and so on
-CREATE TABLE CreditCardProvider(
-    CreditCardProviderID INT PRIMARY KEY,
+CREATE TABLE CardProvider(
+    CardProviderID INT PRIMARY KEY,
     Name VARCHAR(20)
 );
 
@@ -139,7 +139,7 @@ CREATE TABLE Card(
     AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
     CardTypeID INT FOREIGN KEY REFERENCES CardType(CardTypeID),
     ApprovedBY INT FOREIGN KEY REFERENCES Employee(EmployeeID),
-    CreditCardName VARCHAR(20),
+    --CreditCardName VARCHAR(20),
     CreditCardProviderID INT FOREIGN KEY REFERENCES CreditCardProvider(CreditCardProviderID),
     Balance MONEY,
     Status VARCHAR(10),
