@@ -78,10 +78,10 @@ CREATE TABLE CustomerFinancialHistory(
 --Table Account
 CREATE TABLE Account(
     AccountID INT NOT NULL PRIMARY KEY,
-    BranchCode INT NOT NULL FOREIGN KEY REFERENCES BankBranch(BranchCode),
-    CustomerID INT NOT NULL FOREIGN KEY REFERENCES CustomerData(CustomerID),
-    CreatedByEmployee INT NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
-    AccountType VARCHAR(10) NOT NULL,
+    BranchCode INT  FOREIGN KEY REFERENCES BankBranch(BranchCode),
+    CustomerID INT  FOREIGN KEY REFERENCES CustomerData(CustomerID),
+    CreatedByEmployee INT  FOREIGN KEY REFERENCES Employee(EmployeeID),
+    AccountType VARCHAR(10),
     Balance MONEY DEFAULT 0.0
 );
 
@@ -98,7 +98,12 @@ CREATE TABLE Insurance(
     InsuranceTypeID INT NOT NULL FOREIGN KEY REFERENCES InsuranceType(InsuranceTypeID),
     ApprovedByEmployee INT NOT NULL FOREIGN KEY REFERENCES Employee(EmployeeID),
     InsuranceAmount MONEY,
-    [Status] VARCHAR(20)
+    --[Status] VARCHAR(20),
+    InsurancePayment MONEY DEFAULT 0.0,
+    InsuranceClaimed MONEY DEFAULT 0.0,
+    InsuranceIssuedDate DATE,
+    RecentClaimDate DATE,
+    RecentInsurancePaymentDate DATE
 );
 
 
@@ -146,11 +151,16 @@ CREATE TABLE Card(
     InterestRate FLOAT
 );
 
+CREATE TABLE TransactionType(
+    TransactionTypeID INT NOT NULL PRIMARY KEY,
+    TransactionDescription VARCHAR(50)
+);
 
 -- Is it if I put the Beneficiary ID as Foreign key? 
 -- Remove loan id from the table in the erd
 CREATE TABLE TransactionTable(
     TransactionID INT IDENTITY PRIMARY KEY,
+    TransactionTypeID INT FOREIGN KEY REFERENCES TransactionType(TransactionTypeID),
     AccountID INT FOREIGN KEY REFERENCES Account(AccountID),
     CardID INT FOREIGN KEY REFERENCES Card(CardID),
     InsuranceID INT FOREIGN KEY REFERENCES Insurance(InsuranceID),
@@ -159,3 +169,4 @@ CREATE TABLE TransactionTable(
     PaymentDate DATE,
     TransactionAmount MONEY
 );
+
