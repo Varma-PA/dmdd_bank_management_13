@@ -34,42 +34,10 @@ ADD [Status] AS (dbo.calculateCreditScoreStatus(CustomerID));
 SELECT * FROM CustomerFinancialHistory;
 
 
--- Function used to add Money
-GO
-CREATE FUNCTION AddMoney(@ValueOne MONEY, @ValueTwo MONEY)
-RETURNS MONEY
-AS
-BEGIN
 
-    DECLARE @Output MONEY;
-
-    SET @Output = 0.0;
-
-    SET @Output = @ValueOne + @ValueTwo;
-
-    RETURN @Output;
-END
-GO
-
--- Function used to Subtract Money
-GO
-CREATE FUNCTION SubtractMoney(@ValueOne MONEY, @ValueTwo MONEY)
-RETURNS MONEY
-AS
-BEGIN
-
-    DECLARE @Output MONEY;
-
-    SET @Output = 0.0;
-
-    SET @Output = ABS(@ValueOne - @ValueTwo);
-
-    RETURN @Output;
-END
-GO
-
---------------------------------------------------------
 --TABLE-LEVEL CONSTRAINT FUNCTION 
+
+--Added a Constraint to not allow a person with the same Name and SSN to register
 GO
 CREATE OR ALTER FUNCTION isPersonRegistered(@firstName VARCHAR(20), @lastName VARCHAR(20), @SSN CHAR(50))
 RETURNS INT
