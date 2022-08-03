@@ -143,19 +143,19 @@ INSERT INTO dbo.Account (AccountID, BranchCode, AccountType) VALUES (1, 111,'Ban
 
 
 -- insuranceTable
-INSERT into dbo.Insurance VALUES(101,1001001234,2,901,500000);
-INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000000);
-INSERT into dbo.Insurance VALUES(103,1001001244,1,903,200000);
-INSERT into dbo.Insurance VALUES(104,1001001236,5,904,3000000);
-INSERT into dbo.Insurance VALUES(105,1001001241,2,905,100000);
-INSERT into dbo.Insurance VALUES(106,1001001235,1,906,450000);
-INSERT into dbo.Insurance VALUES(107,1001001238,10,907,90000);
-INSERT into dbo.Insurance VALUES(108,1001001243,9,908,90000);
-INSERT into dbo.Insurance VALUES(109,1001001251,4,908,400000);
-INSERT into dbo.Insurance VALUES(110,1001001252,7,901,10000);
-INSERT into dbo.Insurance VALUES(111,1001001252,6,902,100000);
-INSERT into dbo.Insurance VALUES(112,1001001240,8,909,300000);
-INSERT into dbo.Insurance VALUES(113,1001001239,10,903,50000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(101,1001001234,2,901,500000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(102,1001001239,3,902,2000000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(103,1001001244,1,903,200000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(104,1001001236,5,904,3000000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(105,1001001241,2,905,100000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(106,1001001235,1,906,450000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(107,1001001238,10,907,90000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(108,1001001243,9,908,90000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(109,1001001251,4,908,400000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(110,1001001252,7,901,10000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(111,1001001252,6,902,100000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(112,1001001240,8,909,300000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(113,1001001239,10,903,50000);
 
 
 -- Inserting Loan
