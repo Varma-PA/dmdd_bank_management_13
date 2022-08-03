@@ -1,25 +1,37 @@
 --COMPUTE COLUMN BASED ON A FUNCTION
 
---Calculate Age Column from PersonID and DateOfBirth
+--Calculate Credit Score Status Column from CustomerID
 GO
-CREATE FUNCTION calculateAgeFromDOB(@PersonID INT)
-RETURNS INT
+CREATE FUNCTION calculateCreditScoreStatus(@CustomerID INT)
+RETURNS varchar(12)
 AS
    BEGIN
 
-   DECLARE @Age AS INT
+   DECLARE @CreditScore as INT
+   DECLARE @Status as VARCHAR(12)
 
-   SELECT @Age = DATEDIFF(hour,P.DateOfBirth,GETDATE())/8766 FROM Person P
-   WHERE P.PersonID = @PersonID
+   SELECT @CreditScore = CreditScore FROM CustomerFinancialHistory C
+   WHERE C.CustomerID = @CustomerID
 
-   RETURN @Age
+   IF @CreditScore BETWEEN 300 AND 579
+		SET @Status = 'Poor'
+   ELSE IF @CreditScore BETWEEN 580 AND 669
+		SET @Status = 'Fair'
+   ELSE IF @CreditScore BETWEEN 670 AND 739
+		SET @Status = 'Good'
+   ELSE IF @CreditScore BETWEEN 740 AND 799
+		SET @Status = 'Very Good'
+   ELSE IF @CreditScore BETWEEN 800 AND 850
+		SET @Status = 'Exceptional'
+   
+   RETURN @Status
    END
 GO   
 
-ALTER TABLE dbo.Person
-ADD Age AS (dbo.calculateAgeFromDOB(PersonID));
+ALTER TABLE dbo.CustomerFinancialHistory
+ADD [Status] AS (dbo.calculateCreditScoreStatus(CustomerID));
 
-SELECT * FROM Person;
+SELECT * FROM CustomerFinancialHistory;
 
 
 -- Function used to add Money

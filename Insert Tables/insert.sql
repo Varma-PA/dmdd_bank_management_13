@@ -105,16 +105,16 @@ INSERT INTO dbo.CustomerData VALUES (310, 110);
 
 
 -- Customer Financial History
-INSERT INTO dbo.CustomerFinancialHistory VALUES (401, 301, 365, 'Poor', '2022-01-23');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (402, 302, 593, 'Fair', '2021-11-16');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (403, 303, 715, 'Good', '2022-07-31');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (404, 304, 778, 'Very Good', '2022-03-17');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (405, 305, 825, 'Excellent', '2021-09-05');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (406, 306, 570, 'Poor', '2021-12-09');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (407, 307, 590, 'Fair', '2022-02-14');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (408, 308, 671, 'Good', '2022-03-19');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (409, 309, 741, 'Very Good', '2022-04-18');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (410, 310, 804, 'Excellent', '2022-05-02');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (401, 301, 365,'2022-01-23');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (402, 302, 593, '2021-11-16');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (403, 303, 715,'2022-07-31');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (404, 304, 778,'2022-03-17');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (405, 305, 825, '2021-09-05');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (406, 306, 570, '2021-12-09');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (407, 307, 590,'2022-02-14');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (408, 308, 671, '2022-03-19');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (409, 309, 741,'2022-04-18');
+INSERT INTO dbo.CustomerFinancialHistory VALUES (410, 310, 804, '2022-05-02');
 
 
 -- Account

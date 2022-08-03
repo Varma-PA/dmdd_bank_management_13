@@ -38,11 +38,11 @@ CREATE TABLE Person(
     DateOfBirth DATE NOT NULL,
     SSN VARCHAR(50),
     Email VARCHAR(50),
-	PhoneNumber CHAR(10) NOT NULL CHECK (PhoneNumber like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
+	PhoneNumber CHAR(10) NOT NULL,
     [Address] VARCHAR(MAX) NOT NULL,
     City VARCHAR(20) NOT NULL,
 	[State] VARCHAR(15) NOT NULL,
-	ZipCode CHAR(5) NOT NULL CHECK (ZipCode like '[0-9][0-9][0-9][0-9][0-9]')
+	ZipCode CHAR(5) NOT NULL
 );
 
 --Table Employee Type
@@ -72,7 +72,6 @@ CREATE TABLE CustomerFinancialHistory(
     FinancialHistoryID INT NOT NULL PRIMARY KEY,
     CustomerID INT NOT NULL FOREIGN KEY REFERENCES CustomerData(CustomerID),
     CreditScore INT,
-    [Status] VARCHAR(10),
     LastUpdatedTime DATE
 );
 
