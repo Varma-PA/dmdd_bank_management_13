@@ -46,7 +46,7 @@ CREATE TABLE Person(
 );
 
 --Table Employee Type
-CREATE TABLE EmployeeType(
+CREATE TABLE EmployeeType(.
     EmployeeTypeID INT NOT NULL PRIMARY KEY,
     [Type] VARCHAR(10) NOT NULL
 );
@@ -140,7 +140,7 @@ CREATE TABLE Card(
     CardTypeID INT FOREIGN KEY REFERENCES CardType(CardTypeID),
     ApprovedBY INT FOREIGN KEY REFERENCES Employee(EmployeeID),
     --CreditCardName VARCHAR(20),
-    CreditCardProviderID INT FOREIGN KEY REFERENCES CreditCardProvider(CreditCardProviderID),
+    CardProviderID INT FOREIGN KEY REFERENCES CardProvider(CardProviderID),
     Balance MONEY,
     Status VARCHAR(10),
     InterestRate FLOAT
