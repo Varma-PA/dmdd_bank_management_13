@@ -16,18 +16,28 @@ BEGIN
 
     DECLARE @ResultantFromSubtraction MONEY;
     DECLARE @ResultantFromAddition MONEY;
+    DECLARE @InsuranceID INT;
+    DECLARE @CardID INT;
+    DECLARE @TransactionType INT;
 
+    Select @SourceAccountID = AccountID, 
+    @DestAccountID = BeneficiaryAccountID, 
+    @TheAmount = TransactionAmount, 
+    @TransactionType = TransactionTypeID
+    FROM inserted;
 
-    Select @SourceAccountID = AccountID, @DestAccountID = BeneficiaryAccountID, @TheAmount = TransactionAmount FROM inserted;
+        IF @TransactionType != 3 AND @TransactionType != 6
 
-    SELECT @SourceAccountMoneyAmount = Balance FROM Account WHERE AccountID = @SourceAccountID;
+            SELECT @SourceAccountMoneyAmount = Balance FROM Account WHERE AccountID = @SourceAccountID;
 
-    SELECT @DestinationAccountMoneyAmount = Balance FROM Account WHERE AccountID = @DestAccountID;
+            SELECT @DestinationAccountMoneyAmount = Balance FROM Account WHERE AccountID = @DestAccountID;
 
-    -- Subtracting from the source account
-    UPDATE Account SET Balance = @SourceAccountMoneyAmount - @TheAmount WHERE AccountID = @SourceAccountID;
+            -- Subtracting from the source account
+            UPDATE Account SET Balance = @SourceAccountMoneyAmount - @TheAmount WHERE AccountID = @SourceAccountID;
 
-    UPDATE Account SET Balance = @DestinationAccountMoneyAmount + @TheAmount WHERE AccountID = @DestAccountID;
+            UPDATE Account SET Balance = @DestinationAccountMoneyAmount + @TheAmount WHERE AccountID = @DestAccountID;
 
 END
 GO
+
+DROP TRIGGER UpdateAccountAmount
