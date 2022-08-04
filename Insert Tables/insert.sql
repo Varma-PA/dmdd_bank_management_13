@@ -125,17 +125,37 @@ INSERT INTO dbo.CustomerData VALUES (310, 110);
 
 
 -- Customer Financial History
-INSERT INTO dbo.CustomerFinancialHistory VALUES (401, 301, 365,'2022-01-23');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (402, 302, 593, '2021-11-16');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (403, 303, 715,'2022-07-31');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (404, 304, 778,'2022-03-17');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (405, 305, 825, '2021-09-05');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (406, 306, 570, '2021-12-09');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (407, 307, 590,'2022-02-14');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (408, 308, 671, '2022-03-19');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (409, 309, 741,'2022-04-18');
-INSERT INTO dbo.CustomerFinancialHistory VALUES (410, 310, 804, '2022-05-02');
-
+INSERT INTO dbo.CustomerFinancialHistory (FinancialHistoryID, CustomerID, CreditScore, LastUpdatedTime) VALUES
+(401, 301, 365, '2022-01-23'),
+(402, 302, 593, '2021-11-16'),
+(403, 303, 715, '2022-07-31'),
+(404, 304, 778, '2022-03-17'),
+(405, 305, 825, '2021-09-05'),
+(406, 306, 570, '2021-12-09'),
+(407, 307, 590, '2022-02-14'),
+(408, 308, 671, '2022-03-19'),
+(409, 309, 741, '2022-04-18'),
+(410, 310, 804, '2022-05-02'),
+(411, 311, 570, '2022-06-09'),
+(412, 312, 590, '2021-02-14'),
+(413, 313, 671, '2021-03-19'),
+(414, 314, 741, '2020-04-18'),
+(415, 315, 804, '2021-05-02'),
+(416, 316, 570, '2022-04-09'),
+(417, 317, 590, '2022-07-14'),
+(418, 318, 671, '2021-01-19'),
+(419, 319, 741, '2021-07-18'),
+(420, 320, 804, '2022-05-26'),
+(421, 321, 570, '2021-11-09'),
+(422, 322, 590, '2021-11-14'),
+(423, 323, 671, '2022-05-19'),
+(424, 324, 741, '2021-12-18'),
+(425, 325, 804, '2022-02-02'),
+(426, 326, 570, '2021-08-09'),
+(427, 327, 590, '2022-08-02'),
+(428, 328, 671, '2021-11-19'),
+(429, 329, 741, '2021-06-18'),
+(430, 330, 804, '2022-07-26');
 
 -- Account
 INSERT INTO dbo.Account VALUES (1001001234, 111, 301, 900, 'Savings', 12452);

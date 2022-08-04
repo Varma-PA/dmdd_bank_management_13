@@ -157,7 +157,7 @@ BEGIN
 END
 GO
 
-DROP PROC MakeTransactionFromAccountToAccount;
+--DROP PROC MakeTransactionFromAccountToAccount;
 
 
 CREATE PROCEDURE 
