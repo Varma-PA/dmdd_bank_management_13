@@ -139,21 +139,23 @@ INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
 
+INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (1, 111,'Bank', 1000000000);
+
 
 -- insuranceTable
-INSERT into dbo.Insurance VALUES(101,1001001234,2,901,500000,'Pending');
-INSERT into dbo.Insurance VALUES(102,1001001239,3,902,2000000,'Approved');
-INSERT into dbo.Insurance VALUES(103,1001001244,1,903,200000,'Pending');
-INSERT into dbo.Insurance VALUES(104,1001001236,5,904,3000000,'Approved');
-INSERT into dbo.Insurance VALUES(105,1001001241,2,905,100000,'Pending');
-INSERT into dbo.Insurance VALUES(106,1001001235,1,906,450000,'Pending');
-INSERT into dbo.Insurance VALUES(107,1001001238,10,907,90000,'Approved');
-INSERT into dbo.Insurance VALUES(108,1001001243,9,908,90000,'Pending');
-INSERT into dbo.Insurance VALUES(109,1001001251,4,908,400000,'Approved');
-INSERT into dbo.Insurance VALUES(110,1001001252,7,901,10000,'Approved');
-INSERT into dbo.Insurance VALUES(111,1001001252,6,902,100000,'Pending');
-INSERT into dbo.Insurance VALUES(112,1001001240,8,909,300000,'Approved');
-INSERT into dbo.Insurance VALUES(113,1001001239,10,903,50000,'Approved');
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(101,1001001234,2,901,500000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(102,1001001239,3,902,2000000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(103,1001001244,1,903,200000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(104,1001001236,5,904,3000000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(105,1001001241,2,905,100000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(106,1001001235,1,906,450000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(107,1001001238,10,907,90000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(108,1001001243,9,908,90000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(109,1001001251,4,908,400000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(110,1001001252,7,901,10000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(111,1001001252,6,902,100000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(112,1001001240,8,909,300000);
+INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(113,1001001239,10,903,50000);
 
 
 -- Inserting Loan
@@ -203,3 +205,12 @@ INSERT into dbo.card VALUES(10,1001001237,5,900, 6,2000,'Approved',5.6);
 INSERT into dbo.card VALUES(11,1001001236,6,901, 8,900,'Pending',6);
 INSERT into dbo.card VALUES(12,1001001239,2,902, 5,2000,'Approved',5.5);
 
+
+-- Insert into TransactionType
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(1, 'Account Transfer');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(2, 'Insurance Installment');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(3, 'Insurance Claim');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(4, 'Loan Disbursement');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(5, 'Loan Repayment');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(6, 'Card Transactio');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(7, 'Card Repayment');

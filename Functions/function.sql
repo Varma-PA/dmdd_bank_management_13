@@ -34,42 +34,44 @@ ADD [Status] AS (dbo.calculateCreditScoreStatus(CustomerID));
 SELECT * FROM CustomerFinancialHistory;
 
 
--- Function used to add Money
+
+
+--COMPUTE COLUMN BASED ON A FUNCTION
+--Calculating the status using ApprovedByEmployee and Insurance Issued Date
+
 GO
-CREATE FUNCTION AddMoney(@ValueOne MONEY, @ValueTwo MONEY)
-RETURNS MONEY
+CREATE FUNCTION CalculateInsuranceStatus(@InsuranceID INT)
+RETURNS varchar(20)
 AS
-BEGIN
+   BEGIN
 
-    DECLARE @Output MONEY;
+        DECLARE @ApproverID INT;
+        DECLARE @Status VARCHAR(20);
+        DECLARE @InsuranceIssuedDate DATE;
 
-    SET @Output = 0.0;
+        Select @ApproverID = ApprovedByEmployee, @InsuranceIssuedDate = InsuranceIssuedDate FROM dbo.Insurance WHERE InsuranceID = @InsuranceID;
+   
+        IF @ApproverID IS NOT NULL AND getDate() <= @InsuranceIssuedDate
 
-    SET @Output = @ValueOne + @ValueTwo;
+            SET @Status = 'Active';
 
-    RETURN @Output;
-END
-GO
+        ELSE 
 
--- Function used to Subtract Money
-GO
-CREATE FUNCTION SubtractMoney(@ValueOne MONEY, @ValueTwo MONEY)
-RETURNS MONEY
-AS
-BEGIN
+            SET @Status = 'Pending';    
 
-    DECLARE @Output MONEY;
+        RETURN @Status;
 
-    SET @Output = 0.0;
+   END
+GO   
 
-    SET @Output = ABS(@ValueOne - @ValueTwo);
+ALTER TABLE dbo.Insurance
+ADD [Status] AS (dbo.CalculateInsuranceStatus(InsuranceId));
 
-    RETURN @Output;
-END
-GO
 
---------------------------------------------------------
+
 --TABLE-LEVEL CONSTRAINT FUNCTION 
+
+--Added a Constraint to not allow a person with the same Name and SSN to register
 GO
 CREATE OR ALTER FUNCTION isPersonRegistered(@firstName VARCHAR(20), @lastName VARCHAR(20), @SSN CHAR(50))
 RETURNS INT
@@ -86,6 +88,7 @@ BEGIN
 
 END
 GO
+
 
 ALTER TABLE Person WITH NOCHECK ADD CONSTRAINT checkRegisteredPerson
 CHECK (dbo.isPersonRegistered(FirstName, LastName, SSN) = 0);

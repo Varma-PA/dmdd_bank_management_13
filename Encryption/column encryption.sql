@@ -45,6 +45,8 @@ SELECT FirstName_encrypt, LastName_encrypt, DateOfBirth_encrypt, SSN_encrypt, Em
 PhoneNumber_encrypt, Address_encrypt, State_encrypt, City_encrypt, ZipCode_encrypt FROM Person;
 
 --Dropping Old Columns 
+ALTER TABLE PERSON DROP CONSTRAINT checkRegisteredPerson;
+
 ALTER TABLE Person 
 DROP COLUMN [FirstName], [LastName], [DateOfBirth], [SSN], [Email],
 [PhoneNumber], [Address], [City], [State], [ZipCode];

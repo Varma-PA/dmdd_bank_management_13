@@ -13,7 +13,10 @@ BEGIN
 
     SELECT @DestinationAccountExists = COUNT(AccountID) FROM Account WHERE AccountID = @BeneficiaryAccountID;
 
-    IF @SourceAccountExists = 1 AND @DestinationAccountExists = 1
+    IF @SourceAccountID = @BeneficiaryAccountID
+        PRINT 'Beneficiary account ID cannot be same as Source Account ID ';
+
+    ELSE IF @SourceAccountExists = 1 AND @DestinationAccountExists = 1 
 
         BEGIN
 
@@ -61,7 +64,7 @@ GO
 
 DROP PROC MakeTransactionFromAccountToAccount;
 
-EXEC MakeTransactionFromAccountToAccount @SourceAccountID=1001001243, @BeneficiaryAccountID=1001001241, @Amount=431.00
+EXEC MakeTransactionFromAccountToAccount @SourceAccountID=1001001243, @BeneficiaryAccountID=1001001243, @Amount=431.00
 
 GO
 CREATE FUNCTION MakeTransactionFromAccountToInsurance(@SourceAccountID INT, @InsuranceID INT, @Amount MONEY)
