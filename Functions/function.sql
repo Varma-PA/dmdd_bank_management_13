@@ -34,42 +34,6 @@ ADD [Status] AS (dbo.calculateCreditScoreStatus(CustomerID));
 SELECT * FROM CustomerFinancialHistory;
 
 
-
-
---COMPUTE COLUMN BASED ON A FUNCTION
---Calculating the status using ApprovedByEmployee and Insurance Issued Date
-
-GO
-CREATE FUNCTION CalculateInsuranceStatus(@InsuranceID INT)
-RETURNS varchar(20)
-AS
-   BEGIN
-
-        DECLARE @ApproverID INT;
-        DECLARE @Status VARCHAR(20);
-        DECLARE @InsuranceIssuedDate DATE;
-
-        Select @ApproverID = ApprovedByEmployee, @InsuranceIssuedDate = InsuranceIssuedDate FROM dbo.Insurance WHERE InsuranceID = @InsuranceID;
-   
-        IF @ApproverID IS NOT NULL AND getDate() <= @InsuranceIssuedDate
-
-            SET @Status = 'Active';
-
-        ELSE 
-
-            SET @Status = 'Pending';    
-
-        RETURN @Status;
-
-   END
-GO   
-
-ALTER TABLE dbo.Insurance
-ADD [Status] AS (dbo.CalculateInsuranceStatus(InsuranceId));
-
-select * from dbo.Insurance;
-
-
 --TABLE-LEVEL CONSTRAINT FUNCTION 
 
 --Added a Constraint to not allow a person with the same Name and SSN to register
@@ -92,3 +56,7 @@ GO
 
 ALTER TABLE Person WITH NOCHECK ADD CONSTRAINT checkRegisteredPerson
 CHECK (dbo.isPersonRegistered(FirstName, LastName, SSN) = 0);
+
+--checks if the same name is previously registered with same SSN 
+INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN], [Email], [PhoneNumber], [Address], [City], [State], [ZipCode]) VALUES
+(180, 'Liam', 'Ira', CAST('1960-01-20' AS Date), '8776598', 'liamiran@gmail.com', '4133211531', 'Mcgreevey Way', 'Bosto', 'MA', '02120');
