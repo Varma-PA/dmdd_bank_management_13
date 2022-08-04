@@ -2,8 +2,15 @@
 
 --Encryption on User Details
 
+/*
+COMMANDS TO DROP KEYS
+DROP SYMMETRIC KEY user_Key_1;
+DROP CERTIFICATE usercert;
+DROP MASTER KEY;
+*/
+
 --CREATE MASTER KEY
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Password2020$';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Password2022$';
 
  -- CREATE CERTIFICATE
 CREATE CERTIFICATE usercert WITH SUBJECT = 'User Indentity Details';
@@ -46,11 +53,7 @@ PhoneNumber_encrypt, Address_encrypt, State_encrypt, City_encrypt, ZipCode_encry
 
 --Dropping Old Columns 
 ALTER TABLE PERSON DROP CONSTRAINT checkRegisteredPerson;
-
-ALTER TABLE Person 
-DROP COLUMN [FirstName], [LastName], [DateOfBirth], [SSN], [Email],
-[PhoneNumber], [Address], [City], [State], [ZipCode];
-
+ALTER TABLE Person DROP COLUMN [FirstName], [LastName], [DateOfBirth], [SSN], [Email],[PhoneNumber], [Address], [City], [State], [ZipCode];
 
 
  --- Decryption
@@ -71,10 +74,5 @@ FROM Person;
 
 CLOSE SYMMETRIC KEY user_Key_1;
 
-/*
---COMMANDS TO DROP KEYS
-DROP SYMMETRIC KEY user_Key_1;
-DROP CERTIFICATE usercert;
-DROP MASTER KEY;
-*/
+
 
