@@ -1,6 +1,5 @@
-
-
 -- Trigger to update the amount of both source account and destination account when transaction is made
+USE BankManagementGroup13;
 GO
 CREATE TRIGGER UpdateAccountAmount
 ON dbo.TransactionTable
@@ -26,8 +25,7 @@ BEGIN
     @TransactionType = TransactionTypeID
     FROM inserted;
 
-        IF @TransactionType != 3 AND @TransactionType != 6
-
+		
             SELECT @SourceAccountMoneyAmount = Balance FROM Account WHERE AccountID = @SourceAccountID;
 
             SELECT @DestinationAccountMoneyAmount = Balance FROM Account WHERE AccountID = @DestAccountID;
@@ -36,8 +34,8 @@ BEGIN
             UPDATE Account SET Balance = @SourceAccountMoneyAmount - @TheAmount WHERE AccountID = @SourceAccountID;
 
             UPDATE Account SET Balance = @DestinationAccountMoneyAmount + @TheAmount WHERE AccountID = @DestAccountID;
-
+		 
 END
 GO
 
-DROP TRIGGER UpdateAccountAmount
+--DROP TRIGGER UpdateAccountAmount

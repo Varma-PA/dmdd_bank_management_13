@@ -47,7 +47,7 @@ BEGIN
 
                     SELECT @ExistingAmount = InsurancePayment FROM Insurance WHERE InsuranceID = @ServiceID
 
-                    UPDATE dbo.Insurance SET InsurancePayment = @ExistingAmount + @Amount
+                    UPDATE dbo.Insurance SET InsurancePayment = @ExistingAmount + @Amount, RecentInsurancePaymentDate=getDate()
                     WHERE InsuranceID = @ServiceID
                 END
             ELSE IF @TransactionType=3
@@ -57,6 +57,7 @@ BEGIN
                     VALUES (@SourceAccountID, @BeneficiaryAccountID,@ServiceID, getDate(), @Amount,@TransactionType);
 
                     SELECT @ExistingAmount = InsurancePayment FROM Insurance WHERE InsuranceID = @ServiceID
+
                     UPDATE dbo.Insurance SET RecentClaimDate = getDate(), InsuranceClaimed = @ExistingAmount + @Amount
                     WHERE InsuranceID = @ServiceID
                 END
@@ -68,7 +69,7 @@ BEGIN
 
                     SELECT @ExistingAmount = LoanDisbursed FROM Loan WHERE LoanID = @ServiceID
 
-                    UPDATE dbo.Loan SET LoanDisbursed = @ExistingAmount + @Amount
+                    UPDATE dbo.Loan SET LoanDisbursed = @ExistingAmount + @Amount, RecentDisbursementDate=getDate()
                     WHERE LoanID = @ServiceID
                 END
 
@@ -184,4 +185,52 @@ BEGIN
 END
 GO
 
-EXEC PerformTransactions @SrcAccount = 1001001247, @BeneAccount = 1001001237, @ServiceID = 3, @Amount = 1000, @TransactionType = 7
+--ACCOUNT TRANSFER TEST CASE
+--Insufficient Funds
+EXEC PerformTransactions @SrcAccount = 1001001235, @BeneAccount = 1001001237, @ServiceID = 0, @Amount = 1000, @TransactionType = 1;
+--Invalid Account
+EXEC PerformTransactions @SrcAccount = 1001001235, @BeneAccount = 1001001200, @ServiceID = 0, @Amount = 1000, @TransactionType = 1;
+--Valid Scenario
+EXEC PerformTransactions @SrcAccount = 1001001235, @BeneAccount = 1001001237, @ServiceID = 0, @Amount = 100, @TransactionType = 1;
+--Invalid Attempt
+EXEC PerformTransactions @SrcAccount = 1001001235, @BeneAccount = 1001001237, @ServiceID = 0, @Amount = 100, @TransactionType = -1;
+
+
+
+--INSURANCE INSTALLMENTS
+-- on successful transaction amount is credited to bank account
+EXEC PerformTransactions @SrcAccount = 1001001234, @BeneAccount = 1, @ServiceID = 101, @Amount = 1000, @TransactionType = 2;
+select * from TransactionTable;
+select * from Account;
+select * from insurance;
+
+--Insurance Claim
+EXEC PerformTransactions @SrcAccount = 1001001244, @BeneAccount = 1, @ServiceID = 103, @Amount = 1000, @TransactionType = 3;
+select * from TransactionTable;
+select * from Account;
+select * from insurance;
+
+--Loan disbursement
+EXEC PerformTransactions @SrcAccount = 1001001235, @BeneAccount = 1, @ServiceID = 101, @Amount = 1000, @TransactionType = 4;
+select * from TransactionTable;
+select * from Account;
+select * from loan;
+
+--Loan Repayment
+EXEC PerformTransactions @SrcAccount = 1001001237, @BeneAccount = 1001001237, @ServiceID = 102, @Amount = 2, @TransactionType = 5;
+select * from TransactionTable;
+select * from Account;
+select * from loan;
+
+--Card Transaction
+--Insufficient funds in card
+EXEC PerformTransactions @SrcAccount = 1001001234, @BeneAccount = 1001001237, @ServiceID = 1, @Amount = 1000, @TransactionType = 6;
+--Valid Case
+EXEC PerformTransactions @SrcAccount = 1001001234, @BeneAccount = 1001001237, @ServiceID = 1, @Amount = 100, @TransactionType = 6;
+select * from TransactionTable;
+select * from Card;
+
+--Card Refill
+EXEC PerformTransactions @SrcAccount = 1001001244, @BeneAccount = 1001001237, @ServiceID = 8, @Amount = 1000, @TransactionType = 7;
+select * from TransactionTable;
+select * from Card;

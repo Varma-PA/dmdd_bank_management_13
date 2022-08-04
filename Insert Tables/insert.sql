@@ -26,8 +26,8 @@ INSERT INTO dbo.LoanType VALUES (10, 'Small Quick Loan', 'This is Small Quick Lo
 
 -- Card Type
 INSERT INTO dbo.CardType VALUES (1, 'Credit Card', 'A credit card allows you to make purchases and pay for them later');
-INSERT INTO dbo.CardType VALUES (2, 'Debit Card', 'A payment card that can be used in place of cash to make purchases');
-INSERT INTO dbo.CardType VALUES (3, 'ATM Card', 'An ATM card allows a customer only to withdraw money from an ATM');
+INSERT INTO dbo.CardType VALUES (2, 'Platinum Card', 'A payment card that can be used in place of cash to make purchases');
+INSERT INTO dbo.CardType VALUES (3, 'Forex Card', 'Foreign exchange Card');
 INSERT INTO dbo.CardType VALUES (4, 'Prepaid Card', 'A card you can use to pay for things that is placed in the prepaid card account in advance');
 INSERT INTO dbo.CardType VALUES (5, 'Gift Card', 'A prepaid debit card that is loaded with a specific amount, which can then be used to make purchases and other financial transactions');
 INSERT INTO dbo.CardType VALUES (6, 'Virtual Card', 'A card is stored on phone and can be used to pay contactless in stores or online')
@@ -179,7 +179,46 @@ INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
 INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (0000000001, 111,'Bank', 1000000000);
-
+INSERT INTO dbo.Account VALUES (1001001254, 111, 311, 900, 'Savings', 67392);
+INSERT INTO dbo.Account VALUES (1001001255, 111, 311, 900, 'Checking', 8468);
+INSERT INTO dbo.Account VALUES (1001001256, 112, 312, 902, 'Savings', 7486);
+INSERT INTO dbo.Account VALUES (1001001257, 112, 312, 902, 'Checking', 920);
+INSERT INTO dbo.Account VALUES (1001001258, 113, 313, 902, 'Savings', 8597);
+INSERT INTO dbo.Account VALUES (1001001259, 113, 313, 902, 'Checking', 98);
+INSERT INTO dbo.Account VALUES (1001001260, 114, 314, 903, 'Savings', 9567);
+INSERT INTO dbo.Account VALUES (1001001261, 114, 314, 903, 'Checking', 88);
+INSERT INTO dbo.Account VALUES (1001001262, 115, 315, 904, 'Savings', 4556);
+INSERT INTO dbo.Account VALUES (1001001263, 115, 315, 904, 'Checking', 453);
+INSERT INTO dbo.Account VALUES (1001001264, 116, 316, 905, 'Savings', 56743);
+INSERT INTO dbo.Account VALUES (1001001265, 116, 316, 905, 'Checking', 66);
+INSERT INTO dbo.Account VALUES (1001001266, 117, 317, 906, 'Savings', 5573);
+INSERT INTO dbo.Account VALUES (1001001267, 117, 317, 906, 'Checking', 5577);
+INSERT INTO dbo.Account VALUES (1001001268, 118, 318, 907, 'Savings', 24467);
+INSERT INTO dbo.Account VALUES (1001001269, 118, 318, 907, 'Checking', 5577);
+INSERT INTO dbo.Account VALUES (1001001270, 119, 319, 908, 'Savings', 245578);
+INSERT INTO dbo.Account VALUES (1001001271, 119, 319, 908, 'Checking', 5467);
+INSERT INTO dbo.Account VALUES (1001001272, 120, 320, 909, 'Savings', 3426);
+INSERT INTO dbo.Account VALUES (1001001273, 120, 320, 909, 'Checking', 43);
+INSERT INTO dbo.Account VALUES (1001001274, 111, 321, 900, 'Savings', 67392);
+INSERT INTO dbo.Account VALUES (1001001275, 111, 321, 900, 'Checking', 8468);
+INSERT INTO dbo.Account VALUES (1001001276, 112, 322, 902, 'Savings', 7486);
+INSERT INTO dbo.Account VALUES (1001001277, 112, 322, 902, 'Checking', 920);
+INSERT INTO dbo.Account VALUES (1001001278, 113, 323, 902, 'Savings', 8597);
+INSERT INTO dbo.Account VALUES (1001001279, 113, 323, 902, 'Checking', 98);
+INSERT INTO dbo.Account VALUES (1001001280, 114, 324, 903, 'Savings', 9567);
+INSERT INTO dbo.Account VALUES (1001001281, 114, 324, 903, 'Checking', 88);
+INSERT INTO dbo.Account VALUES (1001001282, 115, 325, 904, 'Savings', 4556);
+INSERT INTO dbo.Account VALUES (1001001283, 115, 325, 904, 'Checking', 453);
+INSERT INTO dbo.Account VALUES (1001001284, 116, 326, 905, 'Savings', 56743);
+INSERT INTO dbo.Account VALUES (1001001285, 116, 326, 905, 'Checking', 66);
+INSERT INTO dbo.Account VALUES (1001001286, 117, 327, 906, 'Savings', 5573);
+INSERT INTO dbo.Account VALUES (1001001287, 117, 327, 906, 'Checking', 5577);
+INSERT INTO dbo.Account VALUES (1001001288, 118, 328, 907, 'Savings', 24467);
+INSERT INTO dbo.Account VALUES (1001001289, 118, 328, 907, 'Checking', 5577);
+INSERT INTO dbo.Account VALUES (1001001290, 119, 329, 908, 'Savings', 245578);
+INSERT INTO dbo.Account VALUES (1001001291, 119, 329, 908, 'Checking', 5467);
+INSERT INTO dbo.Account VALUES (1001001292, 120, 330, 909, 'Savings', 3426);
+INSERT INTO dbo.Account VALUES (1001001293, 120, 330, 909, 'Checking', 43);
 
 -- insuranceTable
 INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount,InsuranceIssuedDate) VALUES(101,1001001234,2,901,500000,CAST('2022-01-20' AS Date));
@@ -238,7 +277,11 @@ INSERT into dbo.card VALUES(9,1001001241,4,903, 2,890,'Approved',5.5);
 INSERT into dbo.card VALUES(10,1001001237,5,900, 6,2000,'Approved',5.6);
 INSERT into dbo.card VALUES(11,1001001236,6,901, 8,900,'Pending',6);
 INSERT into dbo.card VALUES(12,1001001239,2,902, 5,2000,'Approved',5.5);
-
+INSERT into dbo.card VALUES(13, 1001001270, 1, 900, 1, 2000, 'Pending', 7.2);
+INSERT into dbo.card VALUES(14, 1001001271, 2, 901, 2, 9000, 'Approved', 0.0);
+INSERT into dbo.card VALUES(15, 1001001272, 3, 902, 3, 200, 'Pending', 7.2);
+INSERT into dbo.card VALUES(16, 1001001273, 4, 903, 4, 900, 'Approved', 7.2);
+INSERT into dbo.card VALUES(17, 1001001274, 5, 904, 5, 90, 'Approved', 7.2);
 
 -- Transaction Type
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(1, 'Account Transfer');
@@ -246,5 +289,5 @@ INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALU
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(3, 'Insurance Claim');
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(4, 'Loan Disbursement');
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(5, 'Loan Repayment');
-INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(6, 'Card Transactio');
-INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(7, 'Card Repayment');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(6, 'Card Transaction');
+INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(7, 'Card Refill');
