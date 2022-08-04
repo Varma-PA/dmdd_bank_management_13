@@ -35,6 +35,40 @@ SELECT * FROM CustomerFinancialHistory;
 
 
 
+
+--COMPUTE COLUMN BASED ON A FUNCTION
+--Calculating the status using ApprovedByEmployee and Insurance Issued Date
+
+GO
+CREATE FUNCTION CalculateInsuranceStatus(@InsuranceID INT)
+RETURNS varchar(20)
+AS
+   BEGIN
+
+        DECLARE @ApproverID INT;
+        DECLARE @Status VARCHAR(20);
+        DECLARE @InsuranceIssuedDate DATE;
+
+        Select @ApproverID = ApprovedByEmployee, @InsuranceIssuedDate = InsuranceIssuedDate FROM dbo.Insurance WHERE InsuranceID = @InsuranceID;
+   
+        IF @ApproverID IS NOT NULL AND getDate() <= @InsuranceIssuedDate
+
+            SET @Status = 'Active';
+
+        ELSE 
+
+            SET @Status = 'Pending';    
+
+        RETURN @Status;
+
+   END
+GO   
+
+ALTER TABLE dbo.Insurance
+ADD [Status] AS (dbo.CalculateInsuranceStatus(InsuranceId));
+
+
+
 --TABLE-LEVEL CONSTRAINT FUNCTION 
 
 --Added a Constraint to not allow a person with the same Name and SSN to register
@@ -54,6 +88,7 @@ BEGIN
 
 END
 GO
+
 
 ALTER TABLE Person WITH NOCHECK ADD CONSTRAINT checkRegisteredPerson
 CHECK (dbo.isPersonRegistered(FirstName, LastName, SSN) = 0);
