@@ -67,6 +67,7 @@ GO
 ALTER TABLE dbo.Insurance
 ADD [Status] AS (dbo.CalculateInsuranceStatus(InsuranceId));
 
+select * from dbo.Insurance;
 
 
 --TABLE-LEVEL CONSTRAINT FUNCTION 
@@ -88,7 +89,6 @@ BEGIN
 
 END
 GO
-
 
 ALTER TABLE Person WITH NOCHECK ADD CONSTRAINT checkRegisteredPerson
 CHECK (dbo.isPersonRegistered(FirstName, LastName, SSN) = 0);
