@@ -46,7 +46,7 @@ CREATE TABLE Person(
 );
 
 --Table Employee Type
-CREATE TABLE EmployeeType(
+CREATE TABLE EmployeeType(.
     EmployeeTypeID INT NOT NULL PRIMARY KEY,
     [Type] VARCHAR(10) NOT NULL
 );
