@@ -237,20 +237,25 @@ INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEm
 
 
 -- Loan
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(101, 1001001235, 1, 902, 500000, 2000, '2008-06-12', 30000, '2021-02-05');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(102, 1001001237, 2, 902, 2000000, 300000, '2009-04-12', 1000000, '2020-03-03');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(103, 1001001239, 1, 907, 100000, 2000.0000, '2010-08-15', 30000, '2022-03-23');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(104, 1001001241, 3, 907, 300000, 10000, '2011-12-14', 3000000, '2019-04-19');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(105, 1001001243, 3, 902, 300000, 20000, '2012-04-22', 150000, '2018-05-15');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(106, 1001001245, 8, 907, 500000, 2000, '2013-03-23', 250000, '2017-04-12');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(107, 1001001247, 8, 902, 500000, 20000, '2015-02-19', 300000, '2020-04-13');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(108, 1001001249, 10, 902, 5000, 1000, '2015-06-18', 3000, '2021-04-14');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(109, 1001001251, 1, 902, 70000, 2000, '2016-08-17', 30000, '2022-04-15');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(110, 1001001253, 1, 907, 80000, 2000, '2016-09-18', 30000, '2022-04-15');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(111, 1001001235, 1, 907, 40000, 10000, '2018-08-19', 30000, '2020-04-18');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(112, 1001001237, 1, 902, 60000, 30000, '2018-09-19', 60000, '2020-04-07');
-INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(113, 1001001239, 1, 907, 50000, 10000, '2017-08-18', 50000, '2021-04-08');
-
+INSERT INTO dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES
+(101, 1001001235, 1, 902, 500000, 2000, '2022-06-12', 30000, '2021-02-05'),
+(102, 1001001237, 2, 902, 2000000, 300000, '2022-04-12', 1000000, '2020-03-03'),
+(103, 1001001239, 1, 907, 100000, 2000.0000, '2022-07-15', 30000, '2022-03-23'),
+(104, 1001001241, 3, 907, 300000, 10000, '2022-02-14', 3000000, '2019-04-19'),
+(105, 1001001243, 3, 902, 300000, 20000, '2022-04-22', 150000, '2018-05-15'),
+(106, 1001001245, 8, 907, 500000, 2000, '2022-03-23', 250000, '2017-04-12'),
+(107, 1001001247, 8, 902, 500000, 20000, '2022-02-19', 300000, '2020-04-13'),
+(108, 1001001249, 10, 902, 5000, 1000, '2022-06-18', 3000, '2021-04-14'),
+(109, 1001001251, 1, 902, 70000, 2000, '2022-08-02', 30000, '2022-04-15'),
+(110, 1001001253, 1, 907, 80000, 2000, '2022-05-18', 30000, '2022-04-15'),
+(111, 1001001235, 1, 907, 40000, 10000, '2022-08-01', 30000, '2020-04-18'),
+(112, 1001001237, 1, 902, 60000, 30000, '2022-04-19', 60000, '2020-04-07'),
+(113, 1001001239, 1, 907, 50000, 10000, '2022-07-18', 50000, '2021-01-08'),
+(114, 1001001239, 1, 907, 70000, 10000, '2022-07-18', 70000, '2021-02-08'),
+(115, 1001001244, 1, 907, 50000, 20000, '2022-06-18', 50000, '2021-03-08'),
+(116, 1001001276, 1, 907, 45000, 5000, '2022-06-18', 45000, '2021-04-08'),
+(117, 1001001285, 1, 907, 88000, 55000, '2022-05-18', 88000, '2021-05-08'),
+(118, 1001001265, 1, 907, 43000, 1000, '2022-05-18', 43000, '2021-06-08');
 
 -- Card Provider
 INSERT into dbo.CardProvider VALUES(1,'Chase');
