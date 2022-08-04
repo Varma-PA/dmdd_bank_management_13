@@ -158,7 +158,9 @@ INSERT INTO dbo.Account VALUES (1001001250, 119, 309, 908, 'Savings', 234);
 INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
+
 INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (1, 111,'Bank', 1000000000);
+INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (0000000001, 111,'Bank', 1000000000);
 
 
 -- Insurance

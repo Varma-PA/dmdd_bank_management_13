@@ -3,9 +3,9 @@ INFO 6210 Database Management and Database Design
 P4
 Submitted by 
 Sree Achyutha Penmetcha             NUID : 002960283
-Ankita Kumari                       NUID : 
+Ankita Kumari                       NUID : 002929668
 Hazel Lobo                          NUID : 001001740
-Sanjana Chatti                      NUID : 
+Sanjana Chatti                      NUID : 002105435
 Vachana Belgavi                     NUID : 002101078
 */
 
@@ -22,14 +22,13 @@ CREATE TABLE BankBranch(
     BranchCode INT NOT NULL PRIMARY KEY,
     BranchName VARCHAR(20) NOT NULL,
 	PhoneNumber CHAR(10) NOT NULL CHECK (PhoneNumber like '[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]'),
-    Email VARCHAR(20) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
     [Address] VARCHAR(50) NOT NULL,
     City VARCHAR(10) NOT NULL,
     [State] VARCHAR(15) NOT NULL,
 	ZipCode CHAR(5) NOT NULL CHECK (ZipCode like '[0-9][0-9][0-9][0-9][0-9]')
 );
 
-ALTER TABLE BankBranch ALTER COLUMN  Email VARCHAR(50);
 -- Table Person
 CREATE TABLE Person(
     PersonID INT NOT NULL PRIMARY KEY,
@@ -46,7 +45,7 @@ CREATE TABLE Person(
 );
 
 --Table Employee Type
-CREATE TABLE EmployeeType(.
+CREATE TABLE EmployeeType(
     EmployeeTypeID INT NOT NULL PRIMARY KEY,
     [Type] VARCHAR(10) NOT NULL
 );
@@ -106,7 +105,7 @@ CREATE TABLE Insurance(
     RecentInsurancePaymentDate DATE
 );
 
-
+--Table Loan Type
 CREATE TABLE LoanType(
     LoanTypeID INT PRIMARY KEY,
     LoanType VARCHAR(30),
@@ -151,13 +150,13 @@ CREATE TABLE Card(
     InterestRate FLOAT
 );
 
+--Stores all types of transactions
 CREATE TABLE TransactionType(
     TransactionTypeID INT NOT NULL PRIMARY KEY,
     TransactionDescription VARCHAR(50)
 );
 
--- Is it if I put the Beneficiary ID as Foreign key? 
--- Remove loan id from the table in the erd
+-- Transaction Table
 CREATE TABLE TransactionTable(
     TransactionID INT IDENTITY PRIMARY KEY,
     TransactionTypeID INT FOREIGN KEY REFERENCES TransactionType(TransactionTypeID),
