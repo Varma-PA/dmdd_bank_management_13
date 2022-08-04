@@ -122,6 +122,26 @@ INSERT INTO dbo.CustomerData VALUES (307, 107);
 INSERT INTO dbo.CustomerData VALUES (308, 108);
 INSERT INTO dbo.CustomerData VALUES (309, 109);
 INSERT INTO dbo.CustomerData VALUES (310, 110);
+INSERT INTO dbo.CustomerData VALUES (311, 121);
+INSERT INTO dbo.CustomerData VALUES (312, 122);
+INSERT INTO dbo.CustomerData VALUES (313, 123);
+INSERT INTO dbo.CustomerData VALUES (314, 124);
+INSERT INTO dbo.CustomerData VALUES (315, 125);
+INSERT INTO dbo.CustomerData VALUES (316, 126);
+INSERT INTO dbo.CustomerData VALUES (317, 127);
+INSERT INTO dbo.CustomerData VALUES (318, 128);
+INSERT INTO dbo.CustomerData VALUES (319, 129);
+INSERT INTO dbo.CustomerData VALUES (320, 130);
+INSERT INTO dbo.CustomerData VALUES (321, 131);
+INSERT INTO dbo.CustomerData VALUES (322, 132);
+INSERT INTO dbo.CustomerData VALUES (323, 133);
+INSERT INTO dbo.CustomerData VALUES (324, 134);
+INSERT INTO dbo.CustomerData VALUES (325, 135);
+INSERT INTO dbo.CustomerData VALUES (326, 136);
+INSERT INTO dbo.CustomerData VALUES (327, 137);
+INSERT INTO dbo.CustomerData VALUES (328, 138);
+INSERT INTO dbo.CustomerData VALUES (329, 139);
+INSERT INTO dbo.CustomerData VALUES (330, 140);
 
 
 -- Customer Financial History
