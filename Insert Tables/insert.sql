@@ -67,7 +67,27 @@ INSERT [dbo].[Person] ([PersonID], [FirstName], [LastName], [DateOfBirth], [SSN]
 (117, 'Vachana', 'Belgavi', CAST('1962-02-12' AS Date), '2032615', 'belgavi.v@gmail.com', '4133311553', 'Tremont', 'Stillwater', 'OK', '88123'),
 (118, 'Shraddha', 'Baheti', CAST('1994-04-12' AS Date), '3231109', 'baheti.shraddha@gmail.com', '4133315144', 'Ward', 'Manhatta', 'NY', '44210'),
 (119, 'Sanjana', 'Chatti', CAST('1950-12-12' AS Date), '8451230', 'chatti.s@gmail.com', '4133311568', 'Fenway', 'Michiga', 'MI', '02120'),
-(120, 'Mak', 'Weins', CAST('1998-01-06' AS Date), '8147230', 'weins.mark@yahoo.com', '4133311519', 'Roxburry', 'San Jose', 'CA', '74074');
+(120, 'Mak', 'Weins', CAST('1998-01-06' AS Date), '8147230', 'weins.mark@yahoo.com', '4133311519', 'Roxburry', 'San Jose', 'CA', '74074'),
+(121, 'Alan', 'Walker', CAST('2012-01-06' AS Date), '8147120', 'walker.alan@yahoo.com', '4133311519', 'Roxburry', 'Boston', 'MA', '02135'),
+(122, 'Simon', 'Wang', CAST('2015-01-06' AS Date), '775503940', 'simon.wang@yahoo.com', '4133311519', 'Manhattan', 'New York', 'NY', '12313'),
+(123, 'ron', 'weasley', CAST('2011-01-06' AS Date), '738979973', 'weasley.ron@yahoo.com', '4133311519', 'Roxburry', 'Boston', 'MA', '02135'),
+(124, 'stephen', 'strange', CAST('2011-01-06' AS Date), '547357386', 'stephen.strange@yahoo.com', '4133311519', 'Manhattan', 'New York', 'NY', '12313'),
+(125, 'elizabeth', 'Wong', CAST('2014-01-06' AS Date), '836257394', 'Wong.elizabeth@yahoo.com', '4133311519', 'Roxburry', 'Boston', 'MA', '02135'),
+(126, 'tony', 'stark', CAST('2017-01-06' AS Date), '900867940', 'tony.stark@yahoo.com', '4133311519', 'Manhattan', 'New York', 'NY', '12313'),
+(127, 'emma', 'watson', CAST('2016-01-06' AS Date), '537534221', 'watson.emma@yahoo.com', '4133311519', 'Roxburry', 'Boston', 'MA', '02135'),
+(128, 'harry', 'potter', CAST('2014-01-06' AS Date), '162584984', 'harry.wang@yahoo.com', '4133311519', 'Silicon Valley', 'CA', 'CA', '12313'),
+(129, 'optimus', 'prime', CAST('2013-01-06' AS Date), '908509007', 'prime.optimus@yahoo.com', '4133311519', 'Roxburry', 'Boston', 'MA', '02135'),
+(130, 'peter', 'parker', CAST('2012-01-06' AS Date), '257457284', 'peter.parker@yahoo.com', '4133311519', 'Manhattan', 'New York', 'NY', '12313'),
+(131, 'Sam', 'Kelly', CAST('2004-05-06' AS Date), '745829452', 'sam.kelly@gmail.com', '6179596326', 'Waterfall Drive', 'Canton', 'MA', '02021'),
+(132, 'Karren', 'Murphy', CAST('2003-05-06' AS Date), '749638527', 'karren.murphy@gmail.com', '8629468358', 'Beverly Hills', 'Long Island', 'NY', '53852'),
+(133, 'Irene', 'Schmidt', CAST('2005-05-06' AS Date), '549254862', 's.irene@yahoo.com', '6835839362', 'Living Space', 'Long Island', 'NY', '35724'),
+(134, 'Shoaib', 'Ullah', CAST('1987-05-06' AS Date), '583912111', 'u.shoaib@yahoo.com', '7539215231', 'Casey St', 'Staten Island', 'NY', '63471'),
+(135, 'George', 'Clernon', CAST('2010-03-17' AS Date), '649418115', 'g.clernon@gmail.com', '6939151939', '70 Baker St', 'Riverdale', 'NY', '43164'),
+(136, 'Owais', 'Ahmed', CAST('2007-05-18' AS Date), '581438009', 'a.owais@gmail.com', '5915735718', '89 Bolivar St', 'Canton', 'MA', '02031'),
+(137, 'Charles', 'Bass', CAST('1997-07-26' AS Date), '639518538', 'c.bass@gmail.com', '6591538862', 'Edgewater', 'Canton', 'MA', '02021'),
+(138, 'Randy', 'Doll', CAST('1975-05-06' AS Date), '649528427', 'd.randy@gmail.com', '6925936283', 'Mountain View', 'Stoughton', 'MA', '03031'),
+(139, 'Kayleigh', 'Moquin', CAST('1996-05-06' AS Date), '639538528', 'm.kayleigh@gmail.com', '6178359264', 'Bernard St', 'Bershire', 'NH', '07071'),
+(140, 'Ronald', 'Lahley', CAST('2012-05-06' AS Date), '548251936', 'r.lahley@gmail.com', '6179540372', '27 Walnut St', 'Nautica', 'NY', '64291'); 
 
 
 -- Employee Type
@@ -139,10 +159,11 @@ INSERT INTO dbo.Account VALUES (1001001251, 119, 309, 908, 'Checking', 1465);
 INSERT INTO dbo.Account VALUES (1001001252, 120, 310, 909, 'Savings', 7659);
 INSERT INTO dbo.Account VALUES (1001001253, 120, 310, 909, 'Checking', 9860);
 
+INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (1, 111,'Bank', 1000000000);
 INSERT INTO dbo.Account (AccountID, BranchCode, AccountType, Balance) VALUES (0000000001, 111,'Bank', 1000000000);
 
 
--- insuranceTable
+-- Insurance
 INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(101,1001001234,2,901,500000);
 INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(102,1001001239,3,902,2000000);
 INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(103,1001001244,1,903,200000);
@@ -158,7 +179,7 @@ INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEm
 INSERT into dbo.Insurance (InsuranceID, AccountID, InsuranceTypeID, ApprovedByEmployee, InsuranceAmount) VALUES(113,1001001239,10,903,50000);
 
 
--- Inserting Loan
+-- Loan
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(101, 1001001235, 1, 902, 500000, 2000, '2008-06-12', 30000, '2021-02-05');
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(102, 1001001237, 2, 902, 2000000, 300000, '2009-04-12', 1000000, '2020-03-03');
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(103, 1001001239, 1, 907, 100000, 2000.0000, '2010-08-15', 30000, '2022-03-23');
@@ -174,10 +195,7 @@ INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, Appro
 INSERT INTO BankManagementGroup13.dbo.Loan (LoanID, AccountID, LoanTypeID, ApprovedByEmployee, LoanAmount, LoanPaid, RecentPaymentDate, LoanDisbursed, RecentDisbursementDate) VALUES(113, 1001001239, 1, 907, 50000, 10000, '2017-08-18', 50000, '2021-04-08');
 
 
-
-
-
--- credit_cardprovider
+-- Card Provider
 INSERT into dbo.CardProvider VALUES(1,'Chase');
 INSERT into dbo.CardProvider VALUES(2,'Discover');
 INSERT into dbo.CardProvider VALUES(3,'Bank of America');
@@ -189,9 +207,7 @@ INSERT into dbo.CardProvider VALUES(8,'Barclays');
 INSERT into dbo.CardProvider VALUES(9,'Synchrony');
 
 
-
-
---  card
+-- Card
 INSERT into dbo.card VALUES(1,1001001234,1,900,1,900,'Approved',7.2);
 INSERT into dbo.card VALUES(2,1001001245,4,903 ,4,750,'Approved',6);
 INSERT into dbo.card VALUES(3,1001001247,3,904, 4,890,'Approved',6.2);
@@ -206,7 +222,7 @@ INSERT into dbo.card VALUES(11,1001001236,6,901, 8,900,'Pending',6);
 INSERT into dbo.card VALUES(12,1001001239,2,902, 5,2000,'Approved',5.5);
 
 
--- Insert into TransactionType
+-- Transaction Type
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(1, 'Account Transfer');
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(2, 'Insurance Installment');
 INSERT INTO dbo.TransactionType (TransactionTypeID, TransactionDescription) VALUES(3, 'Insurance Claim');
