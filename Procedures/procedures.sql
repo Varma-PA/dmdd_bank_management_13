@@ -167,17 +167,17 @@ BEGIN
     IF @TransactionType=1
         EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount,@BeneficiaryAccountID=@BeneAccount,@ServiceID=0, @Amount=@Amount, @TransactionType=@TransactionType
     ELSE IF @TransactionType=2
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=1, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=0000000001, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE IF @TransactionType=3
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=1, @BeneficiaryAccountID=@SrcAccount, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=0000000001, @BeneficiaryAccountID=@SrcAccount, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE IF @TransactionType=4
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=1, @BeneficiaryAccountID=@SrcAccount, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=0000000001, @BeneficiaryAccountID=@SrcAccount, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE IF @TransactionType=5
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=1, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=0000000001, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE IF @TransactionType=6
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=1, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=0000000001, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE IF @TransactionType=7
-        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=1, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
+        EXEC MakeTransactionFromAccountToAccount @SourceAccountID=@SrcAccount, @BeneficiaryAccountID=0000000001, @ServiceID=@ServiceID, @Amount=@Amount, @TransactionType=@TransactionType;
     ELSE 
         PRINT 'Invalid Transaction attempt';
 
